@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AJRouter_Example' do
+  pod 'AJRouter', :path => '../'
+
+  target 'AJRouter_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
