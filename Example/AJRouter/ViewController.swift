@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import AJRouter
 
 class ViewController: UIViewController {
-
+    var routerManager = AJRouterMananger.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.lightGray
+        routerManager.routerFilePaths(routerNameFilePath: "", routerClassFilePath: "", routerWhiteFilePath: "")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

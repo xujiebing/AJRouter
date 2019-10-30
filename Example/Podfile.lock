@@ -1,18 +1,8 @@
 PODS:
   - AJRouter (0.1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
 
 DEPENDENCIES:
   - AJRouter (from `../`)
-  - FBSnapshotTestCase (~> 2.1.4)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   AJRouter:
@@ -20,8 +10,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AJRouter: ed1ad4d811b5cb9cebc3e0b852f8ca5b4642d743
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
-PODFILE CHECKSUM: 6d0058e1184d6d18513b3bd0349fc5f1fa55db0b
+PODFILE CHECKSUM: f3507acd7dc18c599edc569e56f28498bb3b95db
 
 COCOAPODS: 1.7.5
