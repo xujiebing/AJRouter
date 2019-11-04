@@ -10,6 +10,18 @@ import Foundation
 public class AJRouterMananger: NSObject {
     
     var namePath, classPath, whitePath: String
+    lazy var routerNameDic = {
+        
+    }
+    lazy var routerClassDic: [String:String] = {
+        
+        return ["":""]
+    }()
+    lazy var routerWhiteArray: [String] = {
+        
+        return [""]
+    }()
+    
     
     // 初始化单例方法
     public static let shared = AJRouterMananger.init()
@@ -41,7 +53,15 @@ public class AJRouterMananger: NSObject {
     /// - Parameter classPath: 路由url与本地类名映射配置文件
     /// - Parameter whitePath: 白名单路由url配置文件,用于外部跳转
     public func reloadRouterFilePaths(routerNameFilePath namePath: String, routerClassFilePath classPath:String, routerWhiteFilePath whitePath: String) {
-        
+        if !namePath.isEmpty {
+            self.namePath = namePath
+        }
+        if !classPath.isEmpty {
+            self.classPath = classPath
+        }
+        if !whitePath.isEmpty {
+            self.whitePath = whitePath
+        }
     }
     
     /// 根据路由名进行跳转
