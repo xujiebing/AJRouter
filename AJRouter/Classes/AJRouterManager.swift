@@ -8,17 +8,35 @@
 import Foundation
 
 public class AJRouterMananger: NSObject {
-    
-    var namePath, classPath, whitePath: String
-    lazy var routerNameDic = {
         
-    }
-    lazy var routerClassDic: [String:String] = {
-        
-        return ["":""]
+    var namePath, classPath, whitePath: String?
+    lazy var routerNameDic: [String:String]? = {
+        if self.namePath == nil {
+            self.namePath = "routerName.json"
+        }
+        self.namePath = AJRouterTool.fullPathWithFillName(fileName: self.namePath!)
+        var nameDic:[String:String]?
+        do {
+            let object = try AJRouterTool.loadJsonFileWithPath(path: self.namePath!)
+            guard object is Dictionary<AnyHashable, String> else {
+                return nameDic
+            }
+            nameDic = object as? [String:String]
+        } catch {
+            print("尚未配置【%@.json】文件, 或此文件格式不正确")
+        }
+        return nameDic
     }()
-    lazy var routerWhiteArray: [String] = {
-        
+    lazy var routerClassDic: [String:[[String:String]]]? = {
+        if self.classPath == nil {
+            self.classPath = "routerClass.json"
+        }
+        return ["":[["":""]]]
+    }()
+    lazy var routerWhiteArray: [String]? = {
+        if self.whitePath == nil {
+            self.whitePath = "routerWhite.json"
+        }
         return [""]
     }()
     
@@ -26,9 +44,6 @@ public class AJRouterMananger: NSObject {
     // 初始化单例方法
     public static let shared = AJRouterMananger.init()
     private override init(){
-        self.namePath = "routerName.json"
-        self.classPath = "routerClass.json"
-        self.whitePath = "routerWhite.json"
         super.init()
     }
     
@@ -54,12 +69,15 @@ public class AJRouterMananger: NSObject {
     /// - Parameter whitePath: 白名单路由url配置文件,用于外部跳转
     public func reloadRouterFilePaths(routerNameFilePath namePath: String, routerClassFilePath classPath:String, routerWhiteFilePath whitePath: String) {
         if !namePath.isEmpty {
+            self.routerNameDic = nil
             self.namePath = namePath
         }
         if !classPath.isEmpty {
+            self.routerClassDic = nil
             self.classPath = classPath
         }
         if !whitePath.isEmpty {
+            self.routerWhiteArray = nil
             self.whitePath = whitePath
         }
     }

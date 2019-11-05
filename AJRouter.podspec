@@ -17,6 +17,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AJRouter/Classes/**/*'
+  s.dependency 'SwiftyJSON', '5.0.0'
   
   # s.resource_bundles = {
   #   'AJRouter' => ['AJRouter/Assets/*.png']
@@ -24,5 +25,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   
 end

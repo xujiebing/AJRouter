@@ -45,7 +45,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CAFBD999844F0EA6F2532CE /* Pods_AJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CB6B1532EF74EE4FC07F0D1 /* AJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AJRouter.podspec; path = ../AJRouter.podspec; sourceTree = "<group>"; };
+		6CB6B1532EF74EE4FC07F0D1 /* AJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AJRouter.podspec; path = ../AJRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B81226D2369D012005E2268 /* routerWhite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerWhite.json; sourceTree = "<group>"; };
 		9B81226E2369D012005E2268 /* routerClass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerClass.json; sourceTree = "<group>"; };
 		9B81226F2369D012005E2268 /* routerName.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerName.json; sourceTree = "<group>"; };
@@ -281,10 +281,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AJRouter/AJRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AJRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "AJRouter/Classes/**/*"
+  "source_files": "AJRouter/Classes/**/*",
+  "dependencies": {
+    "SwiftyJSON": [
+
+    ]
+  }
 }
