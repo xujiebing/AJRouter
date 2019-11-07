@@ -10,13 +10,12 @@ import UIKit
 import AJRouter
 
 class ViewController: UIViewController {
-    var routerManager = AJRouterMananger.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
 //        routerManager.routerFilePaths(routerNameFilePath: "", routerClassFilePath: "", routerWhiteFilePath: "")
-        routerManager.routerWithName(routerName: "AJRouterIndexPage")
+        AJRouterName("AJRouterIndexPage")
     }
 
     override func didReceiveMemoryWarning() {

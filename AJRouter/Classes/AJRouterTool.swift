@@ -20,4 +20,14 @@ class AJRouterTool: NSObject {
         let data = result.data(using: String.Encoding.utf8) ?? Data()
         return JSON(data).object
     }
+    
+    class func routerUrlWithName(routerName:String) -> String? {
+        let url = AJRouterMananger.shared.routerNameDic?[routerName]
+        guard url == nil else {
+            print("路由文件中未配置\(routerName)")
+            return url
+        }
+        return url
+    }
+    
 }

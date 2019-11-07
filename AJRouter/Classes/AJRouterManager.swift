@@ -7,6 +7,14 @@
 
 import Foundation
 
+public func AJRouterName(_ routerName:String) -> Bool {
+    return AJRouterMananger.shared.routerWithName(routerName: routerName, params: nil)
+}
+
+public func AJRouterName(_ routerName:String, _ params:[String:String]) -> Bool {
+    return AJRouterMananger.shared.routerWithName(routerName: routerName, params: params)
+}
+
 public class AJRouterMananger: NSObject {
         
     var namePath, classPath, whitePath: String?
@@ -68,7 +76,7 @@ public class AJRouterMananger: NSObject {
     private override init(){
         super.init()
     }
-    
+
     /// 设置路由文件路径
     /// - Parameter namePath: 路由名与路由url映射配置文件
     /// - Parameter classPath: 路由url与本地类名映射配置文件
@@ -106,27 +114,19 @@ public class AJRouterMananger: NSObject {
     
     /// 根据路由名进行跳转
     /// - Parameter name: 路由名
-    public func routerWithName(routerName name:String) -> Bool {
-        return true;
-    }
-    
-    /// 根据路由名进行跳转
-    /// - Parameter name: 路由名
     /// - Parameter params: 参数
-    public func routerWithName(routerName name:String, params:[String:String]) -> Bool {
-        return true;
-    }
-    
-    /// 根据路由url进行跳转
-    /// - Parameter url: 路由url
-    public func routerWithUrl(routerUrl url:String) -> Bool {
-        return true;
+    public func routerWithName(routerName name:String, params:[String:String]?) -> Bool {
+        let routerUrl = AJRouterTool.routerUrlWithName(routerName: name)
+        guard routerUrl == nil else {
+            return false;
+        }
+        return self.routerWithUrl(routerUrl: routerUrl!, params: params)
     }
     
     /// 根据路由url进行跳转
     /// - Parameter url: 路由url
     /// - Parameter params: 参数
-    public func routerWithUrl(routerUrl url:String, params:[String:String]) -> Bool {
+    public func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
         return true;
     }
     
