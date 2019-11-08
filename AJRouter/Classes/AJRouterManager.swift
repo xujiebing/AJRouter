@@ -16,31 +16,38 @@ public func AJRouterName(_ routerName:String, _ params:[String:String]) -> Bool 
 }
 
 public class AJRouterMananger: NSObject {
-        
     var namePath, classPath, whitePath: String?
     lazy var routerNameDic: [String:String]? = {
-        if self.namePath == nil {
-            self.namePath = "routerName.json"
+        var namePath:String? = self.namePath
+        if namePath == nil {
+            namePath = AJRouterTool.fullPathWithFillName(fileName: "routerName")
         }
-        self.namePath = AJRouterTool.fullPathWithFillName(fileName: self.namePath!)
         var nameDic:[String:String]?
+        guard namePath != nil else {
+            AJPrintLog("尚未配置【\(namePath!).json】文件")
+            return nameDic;
+        }
         do {
-            let object = try AJRouterTool.loadJsonFileWithPath(path: self.namePath!)
+            let object = try AJRouterTool.loadJsonFileWithPath(path: namePath!)
             guard object is Dictionary<AnyHashable, String> else {
                 return nameDic
             }
             nameDic = object as? [String:String]
         } catch {
-            print("尚未配置【routerName.json】文件, 或此文件格式不正确")
+            AJPrintLog("【\(namePath!).json】文件格式不正确")
         }
         return nameDic
     }()
     lazy var routerClassDic: [String:[[String:String]]]? = {
-        if self.classPath == nil {
-            self.classPath = "routerClass.json"
+        var classPath:String? = self.classPath
+        if classPath == nil {
+            classPath = AJRouterTool.fullPathWithFillName(fileName: "routerClass")
         }
-        self.classPath = AJRouterTool.fullPathWithFillName(fileName: self.classPath!)
         var classDic:[String:[[String:String]]]?
+        guard classPath != nil else {
+            AJPrintLog("尚未配置【\(classPath!).json】文件")
+            return classDic;
+        }
         do {
             let object = try AJRouterTool.loadJsonFileWithPath(path: self.classPath!)
             guard object is Dictionary<AnyHashable, Any> else {
@@ -48,16 +55,20 @@ public class AJRouterMananger: NSObject {
             }
             classDic = object as? [String:[[String:String]]]
         } catch {
-            print("尚未配置【routerClass.json】文件, 或此文件格式不正确")
+            AJPrintLog("【\(classPath!).json】文件格式不正确")
         }
         return classDic
     }()
     lazy var routerWhiteArray: [String]? = {
-        if self.whitePath == nil {
-            self.whitePath = "routerWhite.json"
+        var whitePath:String? = self.whitePath
+        if whitePath == nil {
+            whitePath = AJRouterTool.fullPathWithFillName(fileName: "routerWhite")
         }
-        self.whitePath = AJRouterTool.fullPathWithFillName(fileName: self.whitePath!)
         var whiteArray:[String]?
+        guard whitePath != nil else {
+            AJPrintLog("尚未配置【\(whitePath!).json】文件")
+            return whiteArray;
+        }
         do {
             let object = try AJRouterTool.loadJsonFileWithPath(path: self.whitePath!)
             guard object is Array<String> else {
@@ -65,7 +76,7 @@ public class AJRouterMananger: NSObject {
             }
             whiteArray = object as? [String]
         } catch {
-            print("尚未配置【routerWhite.json】文件, 或此文件格式不正确")
+            AJPrintLog("【\(whitePath!).json】文件格式不正确")
         }
         return whiteArray
     }()

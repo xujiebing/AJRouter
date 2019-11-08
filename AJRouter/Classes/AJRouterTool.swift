@@ -23,8 +23,8 @@ class AJRouterTool: NSObject {
     
     class func routerUrlWithName(routerName:String) -> String? {
         let url = AJRouterMananger.shared.routerNameDic?[routerName]
-        guard url == nil else {
-            print("路由文件中未配置\(routerName)")
+        guard url != nil else {
+            AJPrintLog("路由文件中未配置【\(routerName)】")
             return url
         }
         return url
