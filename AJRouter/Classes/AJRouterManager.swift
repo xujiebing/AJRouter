@@ -128,7 +128,7 @@ public class AJRouterMananger: NSObject {
     /// - Parameter params: 参数
     public func routerWithName(routerName name:String, params:[String:String]?) -> Bool {
         let routerUrl = AJRouterTool.routerUrlWithName(routerName: name)
-        guard routerUrl == nil else {
+        guard routerUrl != nil else {
             return false;
         }
         return self.routerWithUrl(routerUrl: routerUrl!, params: params)
@@ -138,6 +138,9 @@ public class AJRouterMananger: NSObject {
     /// - Parameter url: 路由url
     /// - Parameter params: 参数
     public func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
+        if url.hasPrefix("http://") || url.hasPrefix("https://") {
+            return AJRouterTool.openUrlInSafari(urlString: url)
+        }
         return true;
     }
     

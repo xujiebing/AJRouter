@@ -30,4 +30,15 @@ class AJRouterTool: NSObject {
         return url
     }
     
+    class func openUrlInSafari(urlString:String) -> Bool {
+        let url = URL.init(string: urlString)
+        if url != nil {
+            return false;
+        }
+        guard !UIApplication.shared.canOpenURL(url!) else {
+            AJPrintLog("打开系统自带浏览器时, URL格式传的不对, URL是:\(urlString)")
+            return false;
+        }
+        return UIApplication.shared.openURL(url!);
+    }
 }
