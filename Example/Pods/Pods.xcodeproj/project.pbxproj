@@ -17,9 +17,9 @@
 		4DD7F9533229E8DBD23526FBB7E3324F /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C66A9CAE176AAB72C4576E0BE4BD54C /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F827186ED85A26F55896BC791013780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
 		76CF019539FF212A89227C8C8FAB100E /* Pods-AJRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF94CB5A5C845C5E16884C2AFF6AAD4 /* Pods-AJRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7AD1B894C7D0AE29B138B2DFBDAC51D1 /* String+Cateory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622F41A705A511DDA4F9D28ACF5B1BD /* String+Cateory.swift */; };
 		81C6E2AC84E7E2433622C2AEC4F272A1 /* AJRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4940003797F38FF20066D028B6B60C /* AJRouterManager.swift */; };
 		9B2DE2482375C50A005B19D4 /* AJRouterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2DE2472375C50A005B19D4 /* AJRouterConfig.swift */; };
+		9B2DE24A2378CC09005B19D4 /* AJRouterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2DE2492378CC09005B19D4 /* AJRouterModel.swift */; };
 		BE02BF7B8CB44C62F8F53AC9C3878022 /* Pods-AJRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB30D9FBAD8AB6B3CB653468A1259B82 /* Pods-AJRouter_Example-dummy.m */; };
 		C1F91EB6BE570BB895BB698C91DF82D0 /* AJRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD1AE9CCA20FAE0A584DA62B01256E /* AJRouter-dummy.m */; };
 		CAA3A1B07F6C741435781DF0349272B4 /* AJRouterTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CFDB0ABECE86233F45B0DDBCDA1866 /* AJRouterTool.swift */; };
@@ -64,7 +64,6 @@
 		1DE3218702C8E6AD9165B9939939CFA0 /* Pods_AJRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AJRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAD1AE9CCA20FAE0A584DA62B01256E /* AJRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AJRouter-dummy.m"; sourceTree = "<group>"; };
 		246159803FF480720C3DDE0F2B31F81A /* Pods-AJRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Example-Info.plist"; sourceTree = "<group>"; };
-		2622F41A705A511DDA4F9D28ACF5B1BD /* String+Cateory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Cateory.swift"; path = "AJRouter/Classes/String+Cateory.swift"; sourceTree = "<group>"; };
 		27B1F87A9282C20F8ABDB6B0A3116476 /* AJRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AJRouter.xcconfig; sourceTree = "<group>"; };
 		3E72F55A456FD775ABEAC8C1B31C938F /* Pods-AJRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4C66A9CAE176AAB72C4576E0BE4BD54C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		958B8CAEF1A450DDFC8DEAF8FB18E106 /* Pods-AJRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AJRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9731CA3E7F2234A941DA9A547AA15297 /* AJRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJRouter-prefix.pch"; sourceTree = "<group>"; };
 		9B2DE2472375C50A005B19D4 /* AJRouterConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AJRouterConfig.swift; path = AJRouter/Classes/AJRouterConfig.swift; sourceTree = "<group>"; };
+		9B2DE2492378CC09005B19D4 /* AJRouterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AJRouterModel.swift; path = AJRouter/Classes/AJRouterModel.swift; sourceTree = "<group>"; };
 		9CF94CB5A5C845C5E16884C2AFF6AAD4 /* Pods-AJRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AJRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1728CDE0AD42C62143E2B6701F5E882 /* Pods-AJRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AJRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				BF4940003797F38FF20066D028B6B60C /* AJRouterManager.swift */,
 				80CFDB0ABECE86233F45B0DDBCDA1866 /* AJRouterTool.swift */,
 				9B2DE2472375C50A005B19D4 /* AJRouterConfig.swift */,
-				2622F41A705A511DDA4F9D28ACF5B1BD /* String+Cateory.swift */,
+				9B2DE2492378CC09005B19D4 /* AJRouterModel.swift */,
 				D6CF7732B16CF161F6B5AE005B1668FA /* Pod */,
 				E4D7C11E0365086A82B8F2B7A81F5256 /* Support Files */,
 			);
@@ -506,11 +506,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2DE24A2378CC09005B19D4 /* AJRouterModel.swift in Sources */,
 				9B2DE2482375C50A005B19D4 /* AJRouterConfig.swift in Sources */,
 				C1F91EB6BE570BB895BB698C91DF82D0 /* AJRouter-dummy.m in Sources */,
 				81C6E2AC84E7E2433622C2AEC4F272A1 /* AJRouterManager.swift in Sources */,
 				CAA3A1B07F6C741435781DF0349272B4 /* AJRouterTool.swift in Sources */,
-				7AD1B894C7D0AE29B138B2DFBDAC51D1 /* String+Cateory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
