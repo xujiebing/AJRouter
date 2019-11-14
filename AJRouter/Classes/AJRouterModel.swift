@@ -22,9 +22,19 @@ class AJRouterModel: NSObject {
     // 跳转到原生的参数
     var params = Dictionary<String,String>()
     // 跳转方式
-    var jupType = AJRouterJumpType.Push
+    var jumpType = AJRouterJumpType.Push
     
-    class func modelWithUrl(url:String) -> AJRouterModel? {
+    init(_ dic:[AnyHashable:String]) {
+        super.init()
+        if let url = dic["url"] {
+            self.url = url
+        }
+        if let iclass = dic["iclass"] {
+            self.iclass = iclass
+        }
+    }
+    
+    class func modelWithUrl(url:String, params:[String:String]) -> AJRouterModel? {
         var model:AJRouterModel?
         if url.isEmpty {
             AJPrintLog("url为空")
@@ -72,24 +82,56 @@ class AJRouterModel: NSObject {
             return model;
         }
         for item in array! {
-            
+            let itemModel = AJRouterModel.init(item)
+            let itemUrl = AJRouterTool.filterUrlParams(url: itemModel.url)
+            let targetUrl = AJRouterTool.filterUrlParams(url: url)
+            if itemUrl == targetUrl {
+                itemModel.addParameters(url: url, params: params)
+                model = itemModel
+                break
+            }
         }
-//        [array enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL * _Nonnull stop) {
-//            DBRouterModel *tempModel = DBRouterModel.dbObjectWithKeyValues(item);
-//            // 过滤请求参数
-//            NSString *modelURL = DBRouterTool.filterUrlParams(tempModel.url);
-//            NSString *targetUrl = DBRouterTool.filterUrlParams(url);
-//            if([modelURL isEqualToString:targetUrl]) {
-//                tempModel.addParameters(url, params);
-//                model = tempModel;
-//                *stop = YES;
-//            }
-//        }];
         return model;
     }
     
-    func addParameters(url:String, params:[AnyHashable:Any])  {
-        
+    private func addParameters(url:String, params:[String:String])  {
+        let components = URLComponents.init(string: url)
+        guard components != nil else {
+            return
+        }
+        self.urlComponents = components
+        guard let array = components!.queryItems else {
+            return
+        }
+        var itemDic = [String:String]()
+        for item:URLQueryItem in array {
+            let name = item.name
+            let value = item.value
+            guard value != nil else {
+                continue
+            }
+            if name == "jumptype" {
+                if let type = Int(value!) {
+                    if let jumpType = AJRouterJumpType(rawValue: type) {
+                        self.jumpType = jumpType
+                    }
+                }
+            } else {
+                itemDic[name] = value!
+            }
+            
+        }
+        var dic = [String:String]()
+        if !params.isEmpty {
+            dic = params
+        }
+        if itemDic.isEmpty {
+            return
+        }
+        for (key, value) in itemDic {
+            dic[key] = value
+        }
+        self.params = dic
     }
     
 

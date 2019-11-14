@@ -41,4 +41,24 @@ class AJRouterTool: NSObject {
         }
         return UIApplication.shared.openURL(url!);
     }
+    
+    class func filterUrlParams(url:String) -> String? {
+        var routerUrl = url
+        var targetUrl:String?
+        if routerUrl.isEmpty {
+            return targetUrl
+        }
+        let urlArray = routerUrl.components(separatedBy: "://")
+        if urlArray.isEmpty {
+            return targetUrl
+        }
+        var urlScheme:String = urlArray[0]
+        var lowercaseUrlScheme = urlScheme.lowercased();
+        urlScheme = urlScheme + "://"
+        lowercaseUrlScheme = lowercaseUrlScheme + "://"
+        routerUrl = routerUrl.replacingOccurrences(of: urlScheme, with: lowercaseUrlScheme)
+        let array = routerUrl.components(separatedBy: "?")
+        targetUrl = array[0]
+        return targetUrl
+    }
 }
