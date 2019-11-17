@@ -61,4 +61,29 @@ class AJRouterTool: NSObject {
         targetUrl = array[0]
         return targetUrl
     }
+    
+    class func checkParams(model:AJRouterModel) -> Bool {
+        let url = model.url
+        let components = URLComponents.init(string: url)
+        guard components != nil else {
+            return false
+        }
+        guard let array = components!.queryItems else {
+            return false
+        }
+        let isValid = false
+        for item:URLQueryItem in array {
+            let name = item.name
+            if !name.hasPrefix("*") {
+                continue
+            }
+            let tempName = name.replacingOccurrences(of: "*", with: "")
+            let value = model.params[name]
+            guard value != nil else {
+                AJPrintLog("【\(tempName)】为必填参数, 不能为空")
+                return isValid
+            }
+        }
+        return true
+    }
 }

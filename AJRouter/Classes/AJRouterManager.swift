@@ -141,7 +141,16 @@ public class AJRouterMananger: NSObject {
         if url.hasPrefix("http://") || url.hasPrefix("https://") {
             return AJRouterTool.openUrlInSafari(urlString: url)
         }
-        return true;
+        let model = AJRouterModel.modelWithUrl(url: url, params: params)
+        if model == nil {
+            AJPrintLog("路由异常，请检查路由")
+            return false
+        }
+        guard AJRouterTool.checkParams(model: model!) else {
+            AJPrintLog("参数校验不合法")
+            return false
+        }
+        return self.router(routerModel: model!);
     }
     
     /// 返回上级页面
@@ -163,6 +172,10 @@ public class AJRouterMananger: NSObject {
     
     public func viewControllerWithUrl(routerUrl url:String) -> String {
         return "";
+    }
+    
+    func router(routerModel:AJRouterModel) -> Bool {
+        return true
     }
 }
 

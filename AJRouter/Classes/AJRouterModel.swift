@@ -34,7 +34,7 @@ class AJRouterModel: NSObject {
         }
     }
     
-    class func modelWithUrl(url:String, params:[String:String]) -> AJRouterModel? {
+    class func modelWithUrl(url:String, params:[String:String]?) -> AJRouterModel? {
         var model:AJRouterModel?
         if url.isEmpty {
             AJPrintLog("url为空")
@@ -94,7 +94,7 @@ class AJRouterModel: NSObject {
         return model;
     }
     
-    private func addParameters(url:String, params:[String:String])  {
+    private func addParameters(url:String, params:[String:String]?)  {
         let components = URLComponents.init(string: url)
         guard components != nil else {
             return
@@ -122,8 +122,8 @@ class AJRouterModel: NSObject {
             
         }
         var dic = [String:String]()
-        if !params.isEmpty {
-            dic = params
+        if params != nil {
+            dic = params!
         }
         if itemDic.isEmpty {
             return
@@ -133,7 +133,5 @@ class AJRouterModel: NSObject {
         }
         self.params = dic
     }
-    
-
 }
 
