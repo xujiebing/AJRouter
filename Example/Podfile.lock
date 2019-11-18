@@ -1,6 +1,6 @@
 PODS:
   - AJRouter (0.1.0):
-    - SwiftyJSON
+    - SwiftyJSON (= 5.0.0)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AJRouter: f91402f72895188e416fa3462797ca25919332e5
+  AJRouter: 411d579c4c609d52b31ae2a0a27b2e301099e1a2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: f3507acd7dc18c599edc569e56f28498bb3b95db

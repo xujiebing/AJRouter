@@ -21,7 +21,7 @@
   "source_files": "AJRouter/Classes/**/*",
   "dependencies": {
     "SwiftyJSON": [
-
+      "5.0.0"
     ]
   }
 }

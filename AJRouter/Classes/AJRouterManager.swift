@@ -175,8 +175,30 @@ public class AJRouterMananger: NSObject {
     }
     
     func router(routerModel:AJRouterModel) -> Bool {
+        if routerModel.urlComponents!.path == "/tab" {
+            if let indexNum = routerModel.params["index"] {
+                var complete = false
+                if let index = Int(indexNum) {
+                    complete = AJRouterTool.switchTabbarIndex(index: index)
+                }
+                return complete
+            }
+            return false
+        }
         return true
     }
 }
 
 
+//        // 页面跳转
+//        UIViewController *vc = weakSelf.pageWithModel(model);
+//        if (!vc) {
+//            DBRouterLog(@"当前vc为空, 是否未集成当前vc所在的模块?")
+//            DBRouterPopTool.alert(@"无法获取到目标页面");
+//            return complete;
+//        }
+//        complete = weakSelf.jumpPageWithViewController(model.jumpType, vc);
+//        return complete;
+//    };
+//    return block;
+//}

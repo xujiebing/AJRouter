@@ -86,4 +86,23 @@ class AJRouterTool: NSObject {
         }
         return true
     }
+    
+    class func switchTabbarIndex(index:NSInteger) -> Bool {
+        if let currentVC = UIViewController.currentViewController() {
+            if let tabBar = currentVC.tabBarController {
+                if index >= tabBar.childViewControllers.count {
+                    return false
+                }
+                if let nav = currentVC.navigationController {
+                    nav.popToRootViewController(animated: true)
+                } else {
+                    currentVC.dismiss(animated: true, completion: nil)
+                }
+                currentVC.tabBarController!.selectedIndex = index
+                return true
+            }
+            return false
+        }
+        return false
+    }
 }
