@@ -87,7 +87,7 @@ class AJRouterTool: NSObject {
         return true
     }
     
-    class func switchTabbarIndex(index:NSInteger) -> Bool {
+    class func switchTabBarIndex(index:NSInteger) -> Bool {
         if let currentVC = UIViewController.currentViewController() {
             if let tabBar = currentVC.tabBarController {
                 if index >= tabBar.childViewControllers.count {
@@ -103,6 +103,36 @@ class AJRouterTool: NSObject {
             }
             return false
         }
+        return false
+    }
+    
+    class func viewControllerWithModel(model:AJRouterModel) -> UIViewController? {
+        var vc:UIViewController?
+        if model.url.isEmpty {
+            AJPrintLog("路由URL为空")
+            return vc
+        }
+        let className = model.iclass
+        let iclass:AnyClass? = NSClassFromString(className)
+        if iclass == nil {
+            AJPrintLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
+            return vc
+        }
+        var params = model.params
+        if params["url"] != nil {
+            let targetUrl = model.url.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            params["url"] = targetUrl
+        }
+        let vcClass = iclass as! UIViewController.Type
+        vc = vcClass.init()
+        let selecter = NSSelectorFromString("ajSetParameter:")
+        if params["url"] != nil && vc!.responds(to: selecter) {
+            vc?.performSelector(inBackground: selecter, with: params)
+        }
+        return vc
+    }
+    
+    class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
         return false
     }
 }
