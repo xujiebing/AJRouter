@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AJKit
+## AJKitSwift
 
 Copyright (c) 2019 xujiebing <xujiebing1992@gmail.com>
 

@@ -4,8 +4,8 @@ target 'AJRouter_Example' do
   pod 'AJRouter',
   :path => '../'
   
-  pod 'AJKit',
-  :path => '../../AJKit'
+  pod 'AJKitSwift',
+  :path => '../../AJKitSwift'
   
 
   target 'AJRouter_Tests' do
