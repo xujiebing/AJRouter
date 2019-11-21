@@ -161,12 +161,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AJKitSwift/AJKitSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AJRouter/AJRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AJKitSwift/AJKitSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AJRouter/AJRouter.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
 fi

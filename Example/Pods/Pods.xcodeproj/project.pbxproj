@@ -7,47 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		013AB1DF754FE39982D7F219985D843F /* AJRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37CEC97299E4D5B88912EC12F9A35109 /* AJRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		013AB1DF754FE39982D7F219985D843F /* AJRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBAB913057CEA118EF5D5A7456AE800F /* AJRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0228FF39A41FD3A8167493A59DA1205E /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C66A9CAE176AAB72C4576E0BE4BD54C /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		056541B60B11D5CED0BD7F1F26B3574C /* AJKitSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E9F6AAA5904E0A2A6B506775E9595 /* AJKitSwift-dummy.m */; };
 		0C2B4F874AA88B6F7E86F066D643DEAB /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E473AEF89063E3384C91DA34E0D9B36B /* SwiftyJSON-dummy.m */; };
-		2092884EEBC111CCA2D9528FC1B38DB6 /* UIViewController+AJRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E950FA9F18F368316DB0938446E1DA /* UIViewController+AJRouter.swift */; };
-		33BDA7628FCEA1C5296DA0C68172F87D /* AJRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 754EA1BE08E41CDC78FA881D8DD8FB9D /* AJRouter-dummy.m */; };
+		2092884EEBC111CCA2D9528FC1B38DB6 /* UIViewController+AJRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCF9305E28F5D2F56470788B4CF4F0 /* UIViewController+AJRouter.swift */; };
+		2DB7A8A391907599A43A95BE64F0AF60 /* Pods-AJRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6252A7B209EF538B8B0CD7D376E75910 /* Pods-AJRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33BDA7628FCEA1C5296DA0C68172F87D /* AJRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 673A66A2BF622C37AEDDD0B409A39301 /* AJRouter-dummy.m */; };
 		38AA6153EFEBFE75D479A334D2A51350 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
 		3F82851B3B09816B5A2CBA356E7C0D8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
 		400742F998F9D1D6DD848BDC11529CF6 /* Pods-AJRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD102728EF54917A4CE9E43333890185 /* Pods-AJRouter_Tests-dummy.m */; };
 		4CDCBE523EBC3DF59355E9748708C4F5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFB14D1C6863636A118D1382C4539F /* SwiftyJSON.framework */; };
-		582D11FF108F72296F1E1AC52E9AC93D /* Pods-AJRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6252A7B209EF538B8B0CD7D376E75910 /* Pods-AJRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6058E1083778A4E8CAA5E7F4C1D67A00 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB1305F344936CD0F301F58D3C32736 /* ReplaceMe.swift */; };
+		4F827186ED85A26F55896BC791013780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
 		76CF019539FF212A89227C8C8FAB100E /* Pods-AJRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF94CB5A5C845C5E16884C2AFF6AAD4 /* Pods-AJRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78EDAC4AD4C29C749EE47FCC89E236DC /* AJRouterTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8F711D897C70FDE161168169FDF5F /* AJRouterTool.swift */; };
+		78EDAC4AD4C29C749EE47FCC89E236DC /* AJRouterTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4374A0B0DFD5A3D51AD250B5A164ADBB /* AJRouterTool.swift */; };
 		99D61CFA718648C9408EFB2560DE0292 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */; };
-		9E1DAC2366CC7C191BEC93506322DFBE /* AJRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B155AA3C2DB9D8758B5DEECB41B9D /* AJRouterManager.swift */; };
-		A65C6C811898181A44C01BCFBF006AC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
-		ADFEA67BC1AF0C38F1605DFFB10E8CE4 /* AJKitSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE2C77FB013427624EEFBDA035056244 /* AJKitSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C57F6AE1474C20C7A7B412E887369FC3 /* AJRouterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D56A72902E749B333151A8F64DC4577 /* AJRouterConfig.swift */; };
+		9E1DAC2366CC7C191BEC93506322DFBE /* AJRouterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C712B300E996E4CA5518F6F408976A /* AJRouterManager.swift */; };
+		BE02BF7B8CB44C62F8F53AC9C3878022 /* Pods-AJRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB30D9FBAD8AB6B3CB653468A1259B82 /* Pods-AJRouter_Example-dummy.m */; };
+		C57F6AE1474C20C7A7B412E887369FC3 /* AJRouterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29CE0C1EA48C37E5F9198441513768 /* AJRouterConfig.swift */; };
 		D82647D199690776A357802169793355 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
-		E09C092CC1481DF521087C7E07BDACBB /* AJRouterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9615057E2B7B836998ED9E329E5B3F47 /* AJRouterModel.swift */; };
-		E9FAB39CAE1E117CC3C27B74AAF11E3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */; };
-		FF7ED2811062F75BEBF9C8A18D304757 /* Pods-AJRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB30D9FBAD8AB6B3CB653468A1259B82 /* Pods-AJRouter_Example-dummy.m */; };
+		E09C092CC1481DF521087C7E07BDACBB /* AJRouterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88103503C219E2E0F05AC6D95DD8475F /* AJRouterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		21950529016D5F5FD7D72E78ECADCABE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 703C2A997B824F12775923E04C79D426;
-			remoteInfo = AJKitSwift;
-		};
-		404457165FF12E4E59837D7E619A2DD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
-			remoteInfo = SwiftyJSON;
-		};
-		659108CDC17842ECEFD19231BA0EBF80 /* PBXContainerItemProxy */ = {
+		1DC0DE34FCAA6A680A09FEF838FE4036 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -68,76 +50,64 @@
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
 		};
+		E5886751B7C134B77747D72C54758ECC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F263E5495F32E75E86FFBF96A14597 /* AJRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AJRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		05EB2E221DD60B8EFCF51F6CEE4D84ED /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		0B2482FB06F0909DE9434702C914109F /* AJRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJRouter-prefix.pch"; sourceTree = "<group>"; };
 		0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
 		1DE3218702C8E6AD9165B9939939CFA0 /* Pods_AJRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AJRouter_Tests.framework; path = "Pods-AJRouter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EB1305F344936CD0F301F58D3C32736 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AJKitSwift/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		1EBF6C890394CB40502E45296315DF78 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		1F2667C8F9100A34EFC629E89DD05940 /* AJKitSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AJKitSwift.framework; path = AJKitSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		238B155AA3C2DB9D8758B5DEECB41B9D /* AJRouterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterManager.swift; path = AJRouter/Classes/AJRouterManager.swift; sourceTree = "<group>"; };
 		246159803FF480720C3DDE0F2B31F81A /* Pods-AJRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Example-Info.plist"; sourceTree = "<group>"; };
-		26A6C7F549CBDED7E0C4B4E5666C774C /* AJRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AJRouter.modulemap; sourceTree = "<group>"; };
-		2DF152D4E5ADC51F7DCA4415AE533E81 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2F07E5917B61C63933E3DBCBAAC43119 /* AJKitSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJKitSwift-prefix.pch"; sourceTree = "<group>"; };
-		37CEC97299E4D5B88912EC12F9A35109 /* AJRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJRouter-umbrella.h"; sourceTree = "<group>"; };
-		39F2A401F434FEF7575BD3B6C92198F8 /* AJKitSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AJKitSwift.modulemap; sourceTree = "<group>"; };
 		3E72F55A456FD775ABEAC8C1B31C938F /* Pods-AJRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		43B8F711D897C70FDE161168169FDF5F /* AJRouterTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterTool.swift; path = AJRouter/Classes/AJRouterTool.swift; sourceTree = "<group>"; };
+		4374A0B0DFD5A3D51AD250B5A164ADBB /* AJRouterTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterTool.swift; path = AJRouter/Classes/AJRouterTool.swift; sourceTree = "<group>"; };
 		4C66A9CAE176AAB72C4576E0BE4BD54C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		5316B1715B02456982C5BBAA2B4D985D /* AJRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AJRouter.framework; path = AJRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		571603CA3E54B6CD8547FC7AAB992E07 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		616279BD2B461A099A9F33B24F1A5A9C /* AJRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AJRouter.xcconfig; sourceTree = "<group>"; };
 		6252A7B209EF538B8B0CD7D376E75910 /* Pods-AJRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AJRouter_Example-umbrella.h"; sourceTree = "<group>"; };
 		629F5912703B44EF4FAECCB2B6A84A84 /* Pods-AJRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AJRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6D56A72902E749B333151A8F64DC4577 /* AJRouterConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterConfig.swift; path = AJRouter/Classes/AJRouterConfig.swift; sourceTree = "<group>"; };
+		673A66A2BF622C37AEDDD0B409A39301 /* AJRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AJRouter-dummy.m"; sourceTree = "<group>"; };
 		6FA3EC187DDBEEF8F00B56C08A1D2FA8 /* Pods-AJRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		754EA1BE08E41CDC78FA881D8DD8FB9D /* AJRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AJRouter-dummy.m"; sourceTree = "<group>"; };
-		7B56AD28BC23FD6EAD5AB64C77232988 /* AJKitSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AJKitSwift.xcconfig; sourceTree = "<group>"; };
+		80C712B300E996E4CA5518F6F408976A /* AJRouterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterManager.swift; path = AJRouter/Classes/AJRouterManager.swift; sourceTree = "<group>"; };
 		810C75D57A16D63CCD93C8C31AD150E7 /* Pods-AJRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AJRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		85523FE218EF97B09C813071DD8B57C4 /* AJRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AJRouter.xcconfig; sourceTree = "<group>"; };
 		85C4C72E54A4A05B977D876CE01E5CDC /* Pods-AJRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AJRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		879108ACDC5F3EBD85F2541B630CB816 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		8AE75F3D5FA0A177630BE627FDAD0673 /* AJKitSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AJKitSwift-Info.plist"; sourceTree = "<group>"; };
+		88103503C219E2E0F05AC6D95DD8475F /* AJRouterModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterModel.swift; path = AJRouter/Classes/AJRouterModel.swift; sourceTree = "<group>"; };
 		9566321FFDBB5AC3599982138B8AF489 /* Pods-AJRouter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AJRouter_Tests-Info.plist"; sourceTree = "<group>"; };
 		958B8CAEF1A450DDFC8DEAF8FB18E106 /* Pods-AJRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AJRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9615057E2B7B836998ED9E329E5B3F47 /* AJRouterModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterModel.swift; path = AJRouter/Classes/AJRouterModel.swift; sourceTree = "<group>"; };
 		9CF94CB5A5C845C5E16884C2AFF6AAD4 /* Pods-AJRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AJRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E7B06556FD9FDD7EDA7580BFB00705A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A1728CDE0AD42C62143E2B6701F5E882 /* Pods-AJRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AJRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B0415CDB6563A02ECC3071830C806C1B /* AJRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AJRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B1BC461097F418D1B28B2680030F67FF /* AJKitSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = AJKitSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B1E950FA9F18F368316DB0938446E1DA /* UIViewController+AJRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+AJRouter.swift"; path = "AJRouter/Classes/UIViewController+AJRouter.swift"; sourceTree = "<group>"; };
+		A2EFD0A0A60964FFF5105E030A59EBC6 /* AJRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AJRouter.modulemap; sourceTree = "<group>"; };
 		BA6FB597FDC0A32879D507F8BB36610D /* Pods-AJRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AJRouter_Tests.modulemap"; sourceTree = "<group>"; };
+		BAC0A7C1C278806C2053CFF4D46E6992 /* AJRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AJRouter-Info.plist"; sourceTree = "<group>"; };
+		BBAB913057CEA118EF5D5A7456AE800F /* AJRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJRouter-umbrella.h"; sourceTree = "<group>"; };
 		BBB52C26E746C6C7A2FF802B6E2A0D17 /* Pods_AJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AJRouter_Example.framework; path = "Pods-AJRouter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C07E9F6AAA5904E0A2A6B506775E9595 /* AJKitSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AJKitSwift-dummy.m"; sourceTree = "<group>"; };
+		BCDCF9305E28F5D2F56470788B4CF4F0 /* UIViewController+AJRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+AJRouter.swift"; path = "AJRouter/Classes/UIViewController+AJRouter.swift"; sourceTree = "<group>"; };
 		C2E1B80D7221CDE324BD657B46D2A845 /* Pods-AJRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AJRouter_Example.modulemap"; sourceTree = "<group>"; };
+		C484E582E50A6EF3C831152018859279 /* AJRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJRouter-prefix.pch"; sourceTree = "<group>"; };
 		CE4716CC62A9253CB69F2CD2AA0BAD1E /* Pods-AJRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AJRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
 		D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D7DFB14D1C6863636A118D1382C4539F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC060D9920676C555F5A2D6424F3DA83 /* AJRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AJRouter-Info.plist"; sourceTree = "<group>"; };
 		E06E29E2979CDBEB5F2AD1D03AF329D3 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E473AEF89063E3384C91DA34E0D9B36B /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		E61C8AE201056574B42860CC020F996A /* Pods-AJRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AJRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E8473499E91B2D5B0E8BEDA4FEFA70CC /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		EB29CE0C1EA48C37E5F9198441513768 /* AJRouterConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AJRouterConfig.swift; path = AJRouter/Classes/AJRouterConfig.swift; sourceTree = "<group>"; };
 		EB30D9FBAD8AB6B3CB653468A1259B82 /* Pods-AJRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AJRouter_Example-dummy.m"; sourceTree = "<group>"; };
-		EE2C77FB013427624EEFBDA035056244 /* AJKitSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AJKitSwift-umbrella.h"; sourceTree = "<group>"; };
-		F62C690CC323E909705380561E64F8BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EEAD4054AC0732E2D0755C43E4458773 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FD102728EF54917A4CE9E43333890185 /* Pods-AJRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AJRouter_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04241DAF59E679A816A834AC74A212C5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9FAB39CAE1E117CC3C27B74AAF11E3D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		19DBA6898A78DA7AA4BC55074544D1B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,19 +117,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20288A1BAB76E2CC2737290593C80D15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F827186ED85A26F55896BC791013780 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		298D319799CAB5E17BD33CCC903E1C14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38AA6153EFEBFE75D479A334D2A51350 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50FB61962F9DD4FEB25C35D68634E501 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A65C6C811898181A44C01BCFBF006AC7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,21 +177,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		32F1A941D1660508090FAC263C9CDF25 /* AJRouter */ = {
-			isa = PBXGroup;
-			children = (
-				6D56A72902E749B333151A8F64DC4577 /* AJRouterConfig.swift */,
-				238B155AA3C2DB9D8758B5DEECB41B9D /* AJRouterManager.swift */,
-				9615057E2B7B836998ED9E329E5B3F47 /* AJRouterModel.swift */,
-				43B8F711D897C70FDE161168169FDF5F /* AJRouterTool.swift */,
-				B1E950FA9F18F368316DB0938446E1DA /* UIViewController+AJRouter.swift */,
-				E7AF3BA1E4F91EC805FC50D5990DFA6F /* Pod */,
-				3980EFBF7150AFCDC9E11D26A59FE275 /* Support Files */,
-			);
-			name = AJRouter;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		36AB58DCE8747D206B69D48084D7CBB2 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,37 +187,12 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		3980EFBF7150AFCDC9E11D26A59FE275 /* Support Files */ = {
+		6BA0AF744A3B15CE50E6D5148049458B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				26A6C7F549CBDED7E0C4B4E5666C774C /* AJRouter.modulemap */,
-				85523FE218EF97B09C813071DD8B57C4 /* AJRouter.xcconfig */,
-				754EA1BE08E41CDC78FA881D8DD8FB9D /* AJRouter-dummy.m */,
-				DC060D9920676C555F5A2D6424F3DA83 /* AJRouter-Info.plist */,
-				0B2482FB06F0909DE9434702C914109F /* AJRouter-prefix.pch */,
-				37CEC97299E4D5B88912EC12F9A35109 /* AJRouter-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AJRouter";
-			sourceTree = "<group>";
-		};
-		4B780C3BA2DA6C14B7F604F4836009A5 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A40DCE6688E5AC4DE7012C9C758BF2CC /* AJKitSwift */,
-				32F1A941D1660508090FAC263C9CDF25 /* AJRouter */,
+				FD832CF850DCCCC5ED373C1F958E0384 /* AJRouter */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		617603EF8E24C22B4A99EE1AC7E2DA22 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				B1BC461097F418D1B28B2680030F67FF /* AJKitSwift.podspec */,
-				1EBF6C890394CB40502E45296315DF78 /* LICENSE */,
-				879108ACDC5F3EBD85F2541B630CB816 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		7A3970E1938BC35D28721AFBD362EC25 /* Frameworks */ = {
@@ -291,35 +221,23 @@
 			path = "Target Support Files/Pods-AJRouter_Example";
 			sourceTree = "<group>";
 		};
-		A40DCE6688E5AC4DE7012C9C758BF2CC /* AJKitSwift */ = {
+		82EF577C58553F6CB697160FC9D45628 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EB1305F344936CD0F301F58D3C32736 /* ReplaceMe.swift */,
-				617603EF8E24C22B4A99EE1AC7E2DA22 /* Pod */,
-				B403F462E31011D6C26884BC9F6CF7F8 /* Support Files */,
-			);
-			name = AJKitSwift;
-			path = ../../../AJKitSwift;
-			sourceTree = "<group>";
-		};
-		B403F462E31011D6C26884BC9F6CF7F8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				39F2A401F434FEF7575BD3B6C92198F8 /* AJKitSwift.modulemap */,
-				7B56AD28BC23FD6EAD5AB64C77232988 /* AJKitSwift.xcconfig */,
-				C07E9F6AAA5904E0A2A6B506775E9595 /* AJKitSwift-dummy.m */,
-				8AE75F3D5FA0A177630BE627FDAD0673 /* AJKitSwift-Info.plist */,
-				2F07E5917B61C63933E3DBCBAAC43119 /* AJKitSwift-prefix.pch */,
-				EE2C77FB013427624EEFBDA035056244 /* AJKitSwift-umbrella.h */,
+				A2EFD0A0A60964FFF5105E030A59EBC6 /* AJRouter.modulemap */,
+				616279BD2B461A099A9F33B24F1A5A9C /* AJRouter.xcconfig */,
+				673A66A2BF622C37AEDDD0B409A39301 /* AJRouter-dummy.m */,
+				BAC0A7C1C278806C2053CFF4D46E6992 /* AJRouter-Info.plist */,
+				C484E582E50A6EF3C831152018859279 /* AJRouter-prefix.pch */,
+				BBAB913057CEA118EF5D5A7456AE800F /* AJRouter-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../AJRouter/Example/Pods/Target Support Files/AJKitSwift";
+			path = "Example/Pods/Target Support Files/AJRouter";
 			sourceTree = "<group>";
 		};
-		CC48D0E1E04A7C9948FBD575DFE2809D /* Products */ = {
+		B4F1D7C61C510B4EC809763F2431FAFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F2667C8F9100A34EFC629E89DD05940 /* AJKitSwift.framework */,
 				5316B1715B02456982C5BBAA2B4D985D /* AJRouter.framework */,
 				BBB52C26E746C6C7A2FF802B6E2A0D17 /* Pods_AJRouter_Example.framework */,
 				1DE3218702C8E6AD9165B9939939CFA0 /* Pods_AJRouter_Tests.framework */,
@@ -332,20 +250,20 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				4B780C3BA2DA6C14B7F604F4836009A5 /* Development Pods */,
+				6BA0AF744A3B15CE50E6D5148049458B /* Development Pods */,
 				7A3970E1938BC35D28721AFBD362EC25 /* Frameworks */,
 				2C6A71D462ED46C2A7F74D962134DC74 /* Pods */,
-				CC48D0E1E04A7C9948FBD575DFE2809D /* Products */,
+				B4F1D7C61C510B4EC809763F2431FAFA /* Products */,
 				2B9219FE73A0DAFA528AD546FE8F82A7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E7AF3BA1E4F91EC805FC50D5990DFA6F /* Pod */ = {
+		D270CFCB16A3E54D1156B4C006ED2C7A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				B0415CDB6563A02ECC3071830C806C1B /* AJRouter.podspec */,
-				2DF152D4E5ADC51F7DCA4415AE533E81 /* LICENSE */,
-				F62C690CC323E909705380561E64F8BD /* README.md */,
+				03F263E5495F32E75E86FFBF96A14597 /* AJRouter.podspec */,
+				9E7B06556FD9FDD7EDA7580BFB00705A /* LICENSE */,
+				EEAD4054AC0732E2D0755C43E4458773 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -356,6 +274,21 @@
 				D0570477FB03A97FC79B1D41A902F13D /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		FD832CF850DCCCC5ED373C1F958E0384 /* AJRouter */ = {
+			isa = PBXGroup;
+			children = (
+				EB29CE0C1EA48C37E5F9198441513768 /* AJRouterConfig.swift */,
+				80C712B300E996E4CA5518F6F408976A /* AJRouterManager.swift */,
+				88103503C219E2E0F05AC6D95DD8475F /* AJRouterModel.swift */,
+				4374A0B0DFD5A3D51AD250B5A164ADBB /* AJRouterTool.swift */,
+				BCDCF9305E28F5D2F56470788B4CF4F0 /* UIViewController+AJRouter.swift */,
+				D270CFCB16A3E54D1156B4C006ED2C7A /* Pod */,
+				82EF577C58553F6CB697160FC9D45628 /* Support Files */,
+			);
+			name = AJRouter;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		FF2248F76C1F51163F78F4C1DED1A044 /* Support Files */ = {
@@ -375,14 +308,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		19AC7973CF05A9AA698E98EBECCE06BE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ADFEA67BC1AF0C38F1605DFFB10E8CE4 /* AJKitSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		24FA9D43C74341C389F0D165C25C4A48 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,11 +324,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B88021954769AF9007627EF3C8654BD0 /* Headers */ = {
+		D099A2E768DA69733EBD2C6C1BC66FD3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				582D11FF108F72296F1E1AC52E9AC93D /* Pods-AJRouter_Example-umbrella.h in Headers */,
+				2DB7A8A391907599A43A95BE64F0AF60 /* Pods-AJRouter_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,24 +343,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		703C2A997B824F12775923E04C79D426 /* AJKitSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED416D10B5BC5443B21E76A7FB3B0314 /* Build configuration list for PBXNativeTarget "AJKitSwift" */;
-			buildPhases = (
-				19AC7973CF05A9AA698E98EBECCE06BE /* Headers */,
-				57FDC3BF14779E0CCA0855F0DE042682 /* Sources */,
-				04241DAF59E679A816A834AC74A212C5 /* Frameworks */,
-				1DE7EB3B1958B697BEB220F54EAEADC2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AJKitSwift;
-			productName = AJKitSwift;
-			productReference = 1F2667C8F9100A34EFC629E89DD05940 /* AJKitSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		884839B3174D82280324405AAE639472 /* Pods-AJRouter_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36FB03F44E9145385F6F60E878DA5BD8 /* Build configuration list for PBXNativeTarget "Pods-AJRouter_Tests" */;
@@ -457,19 +364,18 @@
 		};
 		BC5B8B033F628F102783C522B4599E0D /* Pods-AJRouter_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C1DDB1718836D018BDDB6197DC3145F /* Build configuration list for PBXNativeTarget "Pods-AJRouter_Example" */;
+			buildConfigurationList = E24BDBCBCC82A2584706BF6BC825A64B /* Build configuration list for PBXNativeTarget "Pods-AJRouter_Example" */;
 			buildPhases = (
-				B88021954769AF9007627EF3C8654BD0 /* Headers */,
-				4DAF073329E2BEC3889990B923F36C2A /* Sources */,
-				50FB61962F9DD4FEB25C35D68634E501 /* Frameworks */,
-				8249065D7A5346B0130B1B0E4BBE48D5 /* Resources */,
+				D099A2E768DA69733EBD2C6C1BC66FD3 /* Headers */,
+				89B2E4E61D80EB9399C3ADFD97091304 /* Sources */,
+				20288A1BAB76E2CC2737290593C80D15 /* Frameworks */,
+				684BFFB7E78F9B1EFC111DDE36519775 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EF8B22FD809C14EE8B30274F1304772C /* PBXTargetDependency */,
-				D028BD3EAA766150C4450A5E63241049 /* PBXTargetDependency */,
-				A5ECAA32A1BBA999D3BB2846898E937A /* PBXTargetDependency */,
+				FC852088BBCE2A62B6DBB5F95A67A72B /* PBXTargetDependency */,
+				0C16500BC8F31A2D3BEFE06FFB1F7100 /* PBXTargetDependency */,
 			);
 			name = "Pods-AJRouter_Example";
 			productName = "Pods-AJRouter_Example";
@@ -530,11 +436,10 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CC48D0E1E04A7C9948FBD575DFE2809D /* Products */;
+			productRefGroup = B4F1D7C61C510B4EC809763F2431FAFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				703C2A997B824F12775923E04C79D426 /* AJKitSwift */,
 				D4B5FAF717F891FF24D8CD8E392CE5E0 /* AJRouter */,
 				BC5B8B033F628F102783C522B4599E0D /* Pods-AJRouter_Example */,
 				884839B3174D82280324405AAE639472 /* Pods-AJRouter_Tests */,
@@ -544,13 +449,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1DE7EB3B1958B697BEB220F54EAEADC2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		51C55B3577034AB247406E9FE1FCC1DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8249065D7A5346B0130B1B0E4BBE48D5 /* Resources */ = {
+		684BFFB7E78F9B1EFC111DDE36519775 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -582,23 +480,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4DAF073329E2BEC3889990B923F36C2A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF7ED2811062F75BEBF9C8A18D304757 /* Pods-AJRouter_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		57FDC3BF14779E0CCA0855F0DE042682 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				056541B60B11D5CED0BD7F1F26B3574C /* AJKitSwift-dummy.m in Sources */,
-				6058E1083778A4E8CAA5E7F4C1D67A00 /* ReplaceMe.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6B73D9812045D3D305DE4D305D3357BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -613,6 +494,14 @@
 			files = (
 				0C2B4F874AA88B6F7E86F066D643DEAB /* SwiftyJSON-dummy.m in Sources */,
 				99D61CFA718648C9408EFB2560DE0292 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B2E4E61D80EB9399C3ADFD97091304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02BF7B8CB44C62F8F53AC9C3878022 /* Pods-AJRouter_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +521,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0C16500BC8F31A2D3BEFE06FFB1F7100 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = E5886751B7C134B77747D72C54758ECC /* PBXContainerItemProxy */;
+		};
 		2A19995D7E43FBC7177FA223303E031C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
@@ -644,30 +539,18 @@
 			target = BC5B8B033F628F102783C522B4599E0D /* Pods-AJRouter_Example */;
 			targetProxy = 70FABCC5508E4834B8E04A1CF56A6738 /* PBXContainerItemProxy */;
 		};
-		A5ECAA32A1BBA999D3BB2846898E937A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 404457165FF12E4E59837D7E619A2DD9 /* PBXContainerItemProxy */;
-		};
-		D028BD3EAA766150C4450A5E63241049 /* PBXTargetDependency */ = {
+		FC852088BBCE2A62B6DBB5F95A67A72B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AJRouter;
 			target = D4B5FAF717F891FF24D8CD8E392CE5E0 /* AJRouter */;
-			targetProxy = 659108CDC17842ECEFD19231BA0EBF80 /* PBXContainerItemProxy */;
-		};
-		EF8B22FD809C14EE8B30274F1304772C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AJKitSwift;
-			target = 703C2A997B824F12775923E04C79D426 /* AJKitSwift */;
-			targetProxy = 21950529016D5F5FD7D72E78ECADCABE /* PBXContainerItemProxy */;
+			targetProxy = 1DC0DE34FCAA6A680A09FEF838FE4036 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		15BA7429242C6577AEF48B75D7F31D89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85523FE218EF97B09C813071DD8B57C4 /* AJRouter.xcconfig */;
+			baseConfigurationReference = 616279BD2B461A099A9F33B24F1A5A9C /* AJRouter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -731,7 +614,7 @@
 		};
 		296BE2D0C5F2DAD35ECE4816E0BBE3C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85523FE218EF97B09C813071DD8B57C4 /* AJRouter.xcconfig */;
+			baseConfigurationReference = 616279BD2B461A099A9F33B24F1A5A9C /* AJRouter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -750,136 +633,6 @@
 				MODULEMAP_FILE = "Target Support Files/AJRouter/AJRouter.modulemap";
 				PRODUCT_MODULE_NAME = AJRouter;
 				PRODUCT_NAME = AJRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4E94C427E3342E0883820D47316028D5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B56AD28BC23FD6EAD5AB64C77232988 /* AJKitSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AJKitSwift/AJKitSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AJKitSwift/AJKitSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AJKitSwift/AJKitSwift.modulemap";
-				PRODUCT_MODULE_NAME = AJKitSwift;
-				PRODUCT_NAME = AJKitSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6D3BB2320C5245ED5B6BAA2C454AD81C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E61C8AE201056574B42860CC020F996A /* Pods-AJRouter_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		708CBF3060EF9B09839C3F8B08AA57C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 810C75D57A16D63CCD93C8C31AD150E7 /* Pods-AJRouter_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		775DA65A898DA1B30E1FAC440CB08511 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B56AD28BC23FD6EAD5AB64C77232988 /* AJKitSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AJKitSwift/AJKitSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AJKitSwift/AJKitSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AJKitSwift/AJKitSwift.modulemap";
-				PRODUCT_MODULE_NAME = AJKitSwift;
-				PRODUCT_NAME = AJKitSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1047,6 +800,40 @@
 			};
 			name = Release;
 		};
+		A95144C4010EC6D1E97F1965759535F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E61C8AE201056574B42860CC020F996A /* Pods-AJRouter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		BA40E25FC9354B5CC8DC3B7BCDB6AD28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85C4C72E54A4A05B977D876CE01E5CDC /* Pods-AJRouter_Tests.release.xcconfig */;
@@ -1112,6 +899,39 @@
 			};
 			name = Debug;
 		};
+		E480853C157FA80FA45298CB9B7D3AC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810C75D57A16D63CCD93C8C31AD150E7 /* Pods-AJRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1129,15 +949,6 @@
 			buildConfigurations = (
 				916E0404255105F480DC4950B7625F7A /* Debug */,
 				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4C1DDB1718836D018BDDB6197DC3145F /* Build configuration list for PBXNativeTarget "Pods-AJRouter_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				708CBF3060EF9B09839C3F8B08AA57C8 /* Debug */,
-				6D3BB2320C5245ED5B6BAA2C454AD81C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1160,11 +971,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED416D10B5BC5443B21E76A7FB3B0314 /* Build configuration list for PBXNativeTarget "AJKitSwift" */ = {
+		E24BDBCBCC82A2584706BF6BC825A64B /* Build configuration list for PBXNativeTarget "Pods-AJRouter_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E94C427E3342E0883820D47316028D5 /* Debug */,
-				775DA65A898DA1B30E1FAC440CB08511 /* Release */,
+				E480853C157FA80FA45298CB9B7D3AC9 /* Debug */,
+				A95144C4010EC6D1E97F1965759535F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

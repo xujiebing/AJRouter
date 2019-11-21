@@ -3,10 +3,6 @@ use_frameworks!
 target 'AJRouter_Example' do
   pod 'AJRouter',
   :path => '../'
-  
-  pod 'AJKitSwift',
-  :path => '../../AJKitSwift'
-  
 
   target 'AJRouter_Tests' do
     inherit! :search_paths
