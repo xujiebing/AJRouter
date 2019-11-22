@@ -18,7 +18,8 @@ class AJRouterTool: NSObject {
     class func loadJsonFileWithPath(path:String) throws -> Any? {
         let result = try String.init(contentsOfFile: path, encoding: String.Encoding.utf8)
         let data = result.data(using: String.Encoding.utf8) ?? Data()
-        return JSON(data).object
+        let obj = JSON(data).object
+        return obj
     }
     
     class func routerUrlWithName(routerName:String) -> String? {
@@ -88,20 +89,18 @@ class AJRouterTool: NSObject {
     }
     
     class func switchTabBarIndex(index:NSInteger) -> Bool {
-        if let currentVC = UIViewController.currentViewController() {
-            if let tabBar = currentVC.tabBarController {
-                if index >= tabBar.childViewControllers.count {
-                    return false
-                }
-                if let nav = currentVC.navigationController {
-                    nav.popToRootViewController(animated: true)
-                } else {
-                    currentVC.dismiss(animated: true, completion: nil)
-                }
-                currentVC.tabBarController!.selectedIndex = index
-                return true
+        let currentVC = UIViewController.currentViewController()
+        if let tabBar = currentVC.tabBarController {
+            if index >= tabBar.childViewControllers.count {
+                return false
             }
-            return false
+            if let nav = currentVC.navigationController {
+                nav.popToRootViewController(animated: true)
+            } else {
+                currentVC.dismiss(animated: true, completion: nil)
+            }
+            currentVC.tabBarController!.selectedIndex = index
+            return true
         }
         return false
     }
@@ -133,6 +132,17 @@ class AJRouterTool: NSObject {
     }
     
     class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
-        return false
+        let vc = UIViewController.currentViewController();
+        if jumpType == AJRouterJumpType.Present {
+            let nav = UINavigationController.init(rootViewController: vc)
+            vc.present(nav, animated: true, completion: nil)
+            return true;
+        } else {
+            if let nav = vc.navigationController {
+                nav.pushViewController(viewController, animated: true)
+                return true
+            }
+            return false
+        }
     }
 }

@@ -49,7 +49,7 @@ public class AJRouterMananger: NSObject {
             return classDic;
         }
         do {
-            let object = try AJRouterTool.loadJsonFileWithPath(path: self.classPath!)
+            let object = try AJRouterTool.loadJsonFileWithPath(path: classPath!)
             guard object is Dictionary<AnyHashable, Any> else {
                 return classDic;
             }
@@ -70,7 +70,7 @@ public class AJRouterMananger: NSObject {
             return whiteArray;
         }
         do {
-            let object = try AJRouterTool.loadJsonFileWithPath(path: self.whitePath!)
+            let object = try AJRouterTool.loadJsonFileWithPath(path: whitePath!)
             guard object is Array<String> else {
                 return whiteArray;
             }
@@ -143,11 +143,9 @@ public class AJRouterMananger: NSObject {
         }
         let model = AJRouterModel.modelWithUrl(url: url, params: params)
         if model == nil {
-            AJPrintLog("路由异常，请检查路由")
             return false
         }
         guard AJRouterTool.checkParams(model: model!) else {
-            AJPrintLog("参数校验不合法")
             return false
         }
         return self.router(routerModel: model!);
@@ -186,7 +184,6 @@ public class AJRouterMananger: NSObject {
             return false
         }
         guard let vc = AJRouterTool.viewControllerWithModel(model: routerModel) else {
-            AJPrintLog("当前vc为空, 是否未集成当前vc所在的模块?")
             return false
         }
         let complete = AJRouterTool.jumpPageWithViewController(viewController: vc, jumpType: routerModel.jumpType)

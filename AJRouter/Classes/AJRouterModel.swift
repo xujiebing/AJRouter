@@ -73,7 +73,7 @@ class AJRouterModel: NSObject {
         }
         let routerClassDic = AJRouterMananger.shared.routerClassDic
         guard routerClassDic != nil else {
-            AJPrintLog("路由配置文件为空, 请检查路由")
+            AJPrintLog("路由配置文件异常, 请检查路由文件")
             return model
         }
         let array = routerClassDic![moduleName]

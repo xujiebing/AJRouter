@@ -8,22 +8,19 @@
 import Foundation
 
 extension UIViewController {
-    class func currentViewController() -> UIViewController? {
-        var viewController:UIViewController?
+    class func currentViewController() -> UIViewController {
+        var viewController = UIViewController.init()
         let vc = UIApplication.shared.keyWindow!.rootViewController!
         if vc is UITabBarController {
             let tabbar = vc as! UITabBarController
-            viewController = tabbar.selectedViewController
+            viewController = tabbar.selectedViewController!
         } else if vc is UINavigationController {
             let nav = vc as! UINavigationController
-            viewController = nav.visibleViewController
+            viewController = nav.visibleViewController!
         } else {
             viewController = vc
         }
-        if viewController == nil {
-            return viewController
-        }
-        if let presentVC = viewController!.presentedViewController {
+        if let presentVC = viewController.presentedViewController {
             viewController = presentVC
         }
         return viewController;
