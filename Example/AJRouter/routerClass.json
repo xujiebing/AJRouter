@@ -1,11 +1,20 @@
 {
 	"module1": [{
 		"url": "ppt://com.paopaotuan.app/module1/index?jumptype=*",
-		"iclass": "",
+		"iclass": "ViewController",
 		"aclass": ""
 	}, {
-		"url": "ppt://com.paopaotuan.app/module1/index?jumptype=*",
-		"iclass": "",
+		"url": "ppt://com.paopaotuan.app/module1/subPage?jumptype=*",
+		"iclass": "ViewController1",
 		"aclass": ""
-	}]
+	}],
+	"module2": [{
+		"url": "ppt://com.paopaotuan.app/module2/index?jumptype=*",
+		"iclass": "ViewController2",
+		"aclass": ""
+	}, {
+		"url": "ppt://com.paopaotuan.app/module2/subPage?jumptype=*",
+		"iclass": "ViewController3",
+		"aclass": ""
+	}],
 }

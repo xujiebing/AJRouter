@@ -1,3 +1,6 @@
 {
-	"AJRouterIndexPage": "ppt://com.paopaotuan.app/module1/index?jumptype="
+	"AJRouterIndexPage1": "ppt://com.paopaotuan.app/module1/index?jumptype=1",
+	"AJRouterIndexPage2": "ppt://com.paopaotuan.app/module1/subPage?jumptype=1",
+	"AJRouterIndexPage3": "ppt://com.paopaotuan.app/module2/index?jumptype=1",
+	"AJRouterIndexPage4": "ppt://com.paopaotuan.app/module2/subPage?jumptype=1",
 }

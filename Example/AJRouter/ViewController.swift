@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.lightGray
-//        routerManager.routerFilePaths(routerNameFilePath: "", routerClassFilePath: "", routerWhiteFilePath: "")
-        AJRouterName("AJRouterIndexPage")
     }
 
+    @IBAction func push(_ sender: Any) {
+//        AJRouterName("AJRouterIndexPage2", nil)
+        AJRouterPop()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

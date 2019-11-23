@@ -7,14 +7,6 @@
 
 import Foundation
 
-public func AJRouterName(_ routerName:String) -> Bool {
-    return AJRouterMananger.shared.routerWithName(routerName: routerName, params: nil)
-}
-
-public func AJRouterName(_ routerName:String, _ params:[String:String]) -> Bool {
-    return AJRouterMananger.shared.routerWithName(routerName: routerName, params: params)
-}
-
 public class AJRouterMananger: NSObject {
     var namePath, classPath, whitePath: String?
     lazy var routerNameDic: [String:String]? = {
@@ -83,32 +75,13 @@ public class AJRouterMananger: NSObject {
     
     
     // 初始化单例方法
-    public static let shared = AJRouterMananger.init()
+    static let shared = AJRouterMananger.init()
     private override init(){
         super.init()
     }
 
-    /// 设置路由文件路径
-    /// - Parameter namePath: 路由名与路由url映射配置文件
-    /// - Parameter classPath: 路由url与本地类名映射配置文件
-    /// - Parameter whitePath: 白名单路由url配置文件,用于外部跳转
-    public func routerFilePaths(routerNameFilePath namePath:String, routerClassFilePath classPath:String, routerWhiteFilePath whitePath: String) {
-        if !namePath.isEmpty {
-            self.namePath = namePath
-        }
-        if !classPath.isEmpty {
-            self.classPath = classPath
-        }
-        if !whitePath.isEmpty {
-            self.whitePath = whitePath
-        }
-    }
-    
-    /// 更新路由文件路径
-    /// - Parameter namePath: 路由名与路由url映射配置文件
-    /// - Parameter classPath: 路由url与本地类名映射配置文件
-    /// - Parameter whitePath: 白名单路由url配置文件,用于外部跳转
-    public func reloadRouterFilePaths(routerNameFilePath namePath: String, routerClassFilePath classPath:String, routerWhiteFilePath whitePath: String) {
+    // 设置路由文件路径
+    func routerFilePaths(routerNameFilePath namePath:String, routerClassFilePath classPath:String, routerWhiteFilePath whitePath: String) {
         if !namePath.isEmpty {
             self.routerNameDic = nil
             self.namePath = namePath
@@ -123,10 +96,8 @@ public class AJRouterMananger: NSObject {
         }
     }
     
-    /// 根据路由名进行跳转
-    /// - Parameter name: 路由名
-    /// - Parameter params: 参数
-    public func routerWithName(routerName name:String, params:[String:String]?) -> Bool {
+    // 根据路由名进行跳转
+    func routerWithName(routerName name:String, params:[String:String]?) -> Bool {
         let routerUrl = AJRouterTool.routerUrlWithName(routerName: name)
         guard routerUrl != nil else {
             return false;
@@ -134,10 +105,8 @@ public class AJRouterMananger: NSObject {
         return self.routerWithUrl(routerUrl: routerUrl!, params: params)
     }
     
-    /// 根据路由url进行跳转
-    /// - Parameter url: 路由url
-    /// - Parameter params: 参数
-    public func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
+    // 根据路由url进行跳转
+    func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
         if url.hasPrefix("http://") || url.hasPrefix("https://") {
             return AJRouterTool.openUrlInSafari(urlString: url)
         }
@@ -151,14 +120,64 @@ public class AJRouterMananger: NSObject {
         return self.router(routerModel: model!);
     }
     
-    /// 返回上级页面
-    public func popRouter() {
-        
+    // 返回上级页面
+    func popRouter() {
+        let currentVC = UIViewController.currentViewController()
+        if (currentVC.presentingViewController != nil) && currentVC.navigationController?.viewControllers.count == 1 {
+            currentVC.dismiss(animated: true, completion: nil)
+        } else {
+            currentVC.navigationController?.popViewController(animated: true)
+        }
+        if let _ = currentVC.presentingViewController {
+            if let nav = currentVC.navigationController {
+                if nav.viewControllers.count == 1 {
+                    currentVC.dismiss(animated: true, completion: nil)
+                } else {
+                    nav.popViewController(animated: true)
+                }
+            } else {
+                currentVC.dismiss(animated: true, completion: nil)
+            }
+        } else {
+            currentVC.navigationController!.popViewController(animated: true)
+        }
     }
     
-    /// 返回N级页面
-    public func popRouter(index:Int) {
-        
+    // 返回N级页面
+    func popRouter(index:Int) {
+        if (index <= 0) {
+            return;
+        }
+        let currentVC = UIViewController.currentViewController()
+        if let nav = currentVC.navigationController {
+            let vcArray = nav.viewControllers
+            let count = vcArray.count
+            if index + 1 >= count {
+                if let presentVC = currentVC.presentingViewController {
+                    currentVC.dismiss(animated: true) {
+                        self.popRouter(index: index - count)
+                    }
+                    return;
+                }
+                nav.popToRootViewController(animated: true)
+                return
+            }
+            let realIndex = count - index - 1
+            
+//            id targetVC = NSArray.dbObjectAtIndex(vcArray, index);
+//            if (!targetVC) {
+//                return;
+//            }
+//            if (![targetVC isKindOfClass:[UIViewController class]]) {
+//                return;
+//            }
+//            [lastVC.navigationController popToViewController:targetVC animated:YES];
+            
+            return;
+        }
+        if let presentVC = currentVC.presentingViewController {
+            currentVC.dismiss(animated: true, completion: nil)
+        }
     }
     
     /// 返回指定路由页面

@@ -16,7 +16,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'AJRouter/Classes/**/*'
+  s.source_files = 'AJRouter/Classes/*.swift'
   s.dependency 'SwiftyJSON', '5.0.0'
   
   # s.resource_bundles = {

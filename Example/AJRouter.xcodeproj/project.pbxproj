@@ -14,6 +14,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		9B3DA8FE2388B94C00BB326C /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DA8FD2388B94C00BB326C /* ViewController1.swift */; };
+		9B3DA9002388BA0F00BB326C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DA8FF2388BA0F00BB326C /* ViewController2.swift */; };
+		9B3DA9022388BA1B00BB326C /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DA9012388BA1B00BB326C /* ViewController3.swift */; };
 		9B8122702369D012005E2268 /* routerWhite.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226D2369D012005E2268 /* routerWhite.json */; };
 		9B8122712369D012005E2268 /* routerClass.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226E2369D012005E2268 /* routerClass.json */; };
 		9B8122722369D012005E2268 /* routerName.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226F2369D012005E2268 /* routerName.json */; };
@@ -46,6 +49,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6CAFBD999844F0EA6F2532CE /* Pods_AJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB6B1532EF74EE4FC07F0D1 /* AJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AJRouter.podspec; path = ../AJRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B3DA8FD2388B94C00BB326C /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		9B3DA8FF2388BA0F00BB326C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		9B3DA9012388BA1B00BB326C /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		9B81226D2369D012005E2268 /* routerWhite.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerWhite.json; sourceTree = "<group>"; };
 		9B81226E2369D012005E2268 /* routerClass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerClass.json; sourceTree = "<group>"; };
 		9B81226F2369D012005E2268 /* routerName.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routerName.json; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				9B3DA8FD2388B94C00BB326C /* ViewController1.swift */,
+				9B3DA8FF2388BA0F00BB326C /* ViewController2.swift */,
+				9B3DA9012388BA1B00BB326C /* ViewController3.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -344,6 +353,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3DA9022388BA1B00BB326C /* ViewController3.swift in Sources */,
+				9B3DA8FE2388B94C00BB326C /* ViewController1.swift in Sources */,
+				9B3DA9002388BA0F00BB326C /* ViewController2.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

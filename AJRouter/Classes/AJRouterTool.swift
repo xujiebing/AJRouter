@@ -112,7 +112,7 @@ class AJRouterTool: NSObject {
             return vc
         }
         let className = model.iclass
-        let iclass:AnyClass? = NSClassFromString(className)
+        let iclass:AnyClass? = self.classObjecct(className)
         if iclass == nil {
             AJPrintLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
@@ -125,7 +125,7 @@ class AJRouterTool: NSObject {
         let vcClass = iclass as! UIViewController.Type
         vc = vcClass.init()
         let selecter = NSSelectorFromString("ajSetParameter:")
-        if params["url"] != nil && vc!.responds(to: selecter) {
+        if !params.isEmpty && vc!.responds(to: selecter) {
             vc?.performSelector(inBackground: selecter, with: params)
         }
         return vc
@@ -144,5 +144,11 @@ class AJRouterTool: NSObject {
             }
             return false
         }
+    }
+    
+    class func classObjecct(_ className:String) -> AnyClass? {
+        let projectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+        let classObj:AnyClass? = NSClassFromString(projectName + "." + className)
+        return classObj
     }
 }
