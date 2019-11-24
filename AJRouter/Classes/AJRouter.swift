@@ -13,7 +13,7 @@ import SwiftyJSON
 ///   - namePath: 路由名与路由url映射配置文件
 ///   - classPath: 路由url与本地类名映射配置文件
 ///   - whitePath: 白名单路由url配置文件,用于外部跳转
-public func AJRouterFilePaths(_ namePath:String, _ classPath:String, _ whitePath: String) {
+public func AJRouterFilePaths(namePath:String, classPath:String, whitePath: String) {
     AJRouterMananger.shared.routerFilePaths(routerNameFilePath: namePath, routerClassFilePath: classPath, routerWhiteFilePath: whitePath)
 }
 
@@ -21,14 +21,14 @@ public func AJRouterFilePaths(_ namePath:String, _ classPath:String, _ whitePath
 /// - Parameters:
 ///   - routerName: 路由名
 ///   - params: 参数
-public func AJRouterName(_ routerName:String, _ params:[String:String]?) {
+public func AJRouterName(routerName:String, params:[String:String]?) {
     var paramsString = "参数为空"
     if let array = params {
         if let string = JSON(array).string {
             paramsString = string
         }
     }
-    if AJRouterNameCall(routerName, params) {
+    if AJRouterNameCall(routerName: routerName, params: params) {
         AJPrintLog("跳转成功\nrouterName:\(routerName)\nparams:\(paramsString)")
         return;
     }
@@ -39,7 +39,7 @@ public func AJRouterName(_ routerName:String, _ params:[String:String]?) {
 /// - Parameters:
 ///   - routerName: 路由名
 ///   - params: 参数
-public func AJRouterNameCall(_ routerName:String, _ params:[String:String]?) -> Bool {
+public func AJRouterNameCall(routerName:String, params:[String:String]?) -> Bool {
     return AJRouterMananger.shared.routerWithName(routerName: routerName, params: params)
 }
 
@@ -47,14 +47,14 @@ public func AJRouterNameCall(_ routerName:String, _ params:[String:String]?) -> 
 /// - Parameters:
 ///   - routerUrl: 路由url
 ///   - params: 参数
-public func AJRouterUrl(_ routerUrl:String, _ params:[String:String]?) {
+public func AJRouterUrl(routerUrl:String, params:[String:String]?) {
     var paramsString = "参数为空"
     if let array = params {
         if let string = JSON(array).string {
             paramsString = string
         }
     }
-    if AJRouterUrlCall(routerUrl, params) {
+    if AJRouterUrlCall(routerUrl: routerUrl, params: params) {
         AJPrintLog("跳转成功\nrouterName:\(routerUrl)\nparams:\(paramsString)")
         return;
     }
@@ -65,16 +65,25 @@ public func AJRouterUrl(_ routerUrl:String, _ params:[String:String]?) {
 /// - Parameters:
 ///   - routerUrl: 路由url
 ///   - params: 参数
-public func AJRouterUrlCall(_ routerUrl:String, _ params:[String:String]?) -> Bool {
+public func AJRouterUrlCall(routerUrl:String, params:[String:String]?) -> Bool {
     return AJRouterMananger.shared.routerWithUrl(routerUrl: routerUrl, params: params)
 }
 
-// 返回上级页面
-public func AJRouterPop() {
-    AJRouterMananger.shared.popRouter()
+// 返回N级页面
+public func AJRouterPop(index:Int) {
+    AJRouterMananger.shared.popRouter(index: index)
 }
 
-// 返回N级页面
-public func AJRouterPop(_ index:Int) {
-    AJRouterMananger.shared.popRouter(index: index)
+/// 返回指定路由页面
+/// - Parameters:
+///   - url: 路由
+///   - animated: 是否有转场动画
+public func AJRouterPop(routerUrl:String, animated:Bool) {
+    AJRouterMananger.shared.popRouter(routerUrl: routerUrl, animated: animated)
+}
+
+/// 根据url获取页面名称
+/// - Parameter routerUrl: 路由url
+public func AJRouterPageNameWithUrl(routerUrl:String) -> String? {
+    return AJRouterMananger.shared.pageNameWithUrl(routerUrl: routerUrl)
 }

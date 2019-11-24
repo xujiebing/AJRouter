@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     @IBAction func push(_ sender: Any) {
 //        AJRouterName("AJRouterIndexPage2", nil)
-        AJRouterPop()
+        AJRouterPop(index: 1)
     }
     
     override func didReceiveMemoryWarning() {

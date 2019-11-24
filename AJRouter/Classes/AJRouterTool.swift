@@ -151,4 +151,9 @@ class AJRouterTool: NSObject {
         let classObj:AnyClass? = NSClassFromString(projectName + "." + className)
         return classObj
     }
+    
+    class func className(_ object:Any) -> String? {
+        let className = String.init(utf8String: class_getName(object as? AnyClass))
+        return className
+    }
 }

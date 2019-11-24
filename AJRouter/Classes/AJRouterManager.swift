@@ -108,7 +108,7 @@ public class AJRouterMananger: NSObject {
     // 根据路由url进行跳转
     func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
         if url.hasPrefix("http://") || url.hasPrefix("https://") {
-            return AJRouterTool.openUrlInSafari(urlString: url)
+            return url.openInSafari()
         }
         let model = AJRouterModel.modelWithUrl(url: url, params: params)
         if model == nil {
@@ -153,9 +153,9 @@ public class AJRouterMananger: NSObject {
             let vcArray = nav.viewControllers
             let count = vcArray.count
             if index + 1 >= count {
-                if let presentVC = currentVC.presentingViewController {
-                    currentVC.dismiss(animated: true) {
-                        self.popRouter(index: index - count)
+                if let _ = currentVC.presentingViewController {
+                    currentVC.dismiss(animated: true) {[weak self] in
+                        self?.popRouter(index: index - count)
                     }
                     return;
                 }
@@ -163,32 +163,47 @@ public class AJRouterMananger: NSObject {
                 return
             }
             let realIndex = count - index - 1
-            
-//            id targetVC = NSArray.dbObjectAtIndex(vcArray, index);
-//            if (!targetVC) {
-//                return;
-//            }
-//            if (![targetVC isKindOfClass:[UIViewController class]]) {
-//                return;
-//            }
-//            [lastVC.navigationController popToViewController:targetVC animated:YES];
-            
+            let targetVC = vcArray[realIndex]
+            nav.pushViewController(targetVC, animated: true)
             return;
         }
-        if let presentVC = currentVC.presentingViewController {
-            currentVC.dismiss(animated: true, completion: nil)
+        if let _ = currentVC.presentingViewController {
+            currentVC.dismiss(animated: true) { [weak self] in
+                self?.popRouter(index: index - 1)
+            }
         }
     }
     
-    /// 返回指定路由页面
-    /// - Parameter url: 指定路由
-    /// - Parameter animated: 是否有转场动画
-    public func popRouter(routerUrl url:String, animated:Bool)  {
-        
+    // 返回指定路由页面
+    func popRouter(routerUrl url:String, animated:Bool)  {
+        let targetVCName = self.pageNameWithUrl(routerUrl: url)
+        let currentVC = UIViewController.currentViewController()
+        let nav = currentVC.navigationController
+        guard let vcArray = nav?.viewControllers else {
+            return
+        }
+        for itemVC in vcArray {
+            let itemVCName = AJRouterTool.className(itemVC)
+            if itemVCName != targetVCName {
+                continue
+            }
+            nav?.popToViewController(itemVC, animated: animated)
+        }
     }
     
-    public func viewControllerWithUrl(routerUrl url:String) -> String {
-        return "";
+    // 根据url获取页面名称
+    func pageNameWithUrl(routerUrl url:String) -> String? {
+        var pageName:String?
+        if url.isEmpty {
+            AJPrintLog("url为空，无法获取pageName")
+            return pageName
+        }
+        let model = AJRouterModel.modelWithUrl(url: url, params: nil)
+        guard model != nil else {
+            return pageName
+        }
+        pageName = model!.iclass
+        return pageName
     }
     
     func router(routerModel:AJRouterModel) -> Bool {
