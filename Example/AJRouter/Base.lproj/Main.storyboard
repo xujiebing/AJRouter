@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tup-a9-faD">
-                                <rect key="frame" x="126" y="219" width="124" height="62"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGF-3c-ctw">
+                                <rect key="frame" x="125" y="197" width="124" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Push"/>
                                 <connections>
-                                    <action selector="push:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="deg-UV-czg"/>
+                                    <action selector="push:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pAm-7b-baL"/>
                                 </connections>
                             </button>
                         </subviews>

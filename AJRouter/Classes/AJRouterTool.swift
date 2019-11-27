@@ -31,18 +31,6 @@ class AJRouterTool: NSObject {
         return url
     }
     
-    class func openUrlInSafari(urlString:String) -> Bool {
-        let url = URL.init(string: urlString)
-        if url != nil {
-            return false;
-        }
-        guard !UIApplication.shared.canOpenURL(url!) else {
-            AJPrintLog("打开系统自带浏览器时, URL格式传的不对, URL是:\(urlString)")
-            return false;
-        }
-        return UIApplication.shared.openURL(url!);
-    }
-    
     class func filterUrlParams(url:String) -> String? {
         var routerUrl = url
         var targetUrl:String?
@@ -112,7 +100,7 @@ class AJRouterTool: NSObject {
             return vc
         }
         let className = model.iclass
-        let iclass:AnyClass? = self.classObjecct(className)
+        let iclass:AnyClass? = self.classObject(className)
         if iclass == nil {
             AJPrintLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
@@ -146,14 +134,9 @@ class AJRouterTool: NSObject {
         }
     }
     
-    class func classObjecct(_ className:String) -> AnyClass? {
+    class func classObject(_ className:String) -> AnyClass? {
         let projectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         let classObj:AnyClass? = NSClassFromString(projectName + "." + className)
         return classObj
-    }
-    
-    class func className(_ object:Any) -> String? {
-        let className = String.init(utf8String: class_getName(object as? AnyClass))
-        return className
     }
 }

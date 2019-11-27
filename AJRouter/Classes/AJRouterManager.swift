@@ -164,7 +164,7 @@ public class AJRouterMananger: NSObject {
             }
             let realIndex = count - index - 1
             let targetVC = vcArray[realIndex]
-            nav.pushViewController(targetVC, animated: true)
+            nav.popToViewController(targetVC, animated: true)
             return;
         }
         if let _ = currentVC.presentingViewController {
@@ -174,7 +174,16 @@ public class AJRouterMananger: NSObject {
         }
     }
     
-    // 返回指定路由页面
+    // 根据路由名返回指定页面
+    func popRouter(routerName name:String, animated:Bool) {
+        let routerUrl = AJRouterTool.routerUrlWithName(routerName: name)
+        guard routerUrl != nil else {
+            return;
+        }
+        self.popRouter(routerUrl: routerUrl!, animated: animated)
+    }
+    
+    // 根据路由url返回指定页面
     func popRouter(routerUrl url:String, animated:Bool)  {
         let targetVCName = self.pageNameWithUrl(routerUrl: url)
         let currentVC = UIViewController.currentViewController()
@@ -183,11 +192,12 @@ public class AJRouterMananger: NSObject {
             return
         }
         for itemVC in vcArray {
-            let itemVCName = AJRouterTool.className(itemVC)
+            let itemVCName = itemVC.className
             if itemVCName != targetVCName {
                 continue
             }
             nav?.popToViewController(itemVC, animated: animated)
+            return;
         }
     }
     

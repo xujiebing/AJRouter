@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Page"
     }
 
     @IBAction func push(_ sender: Any) {
-//        AJRouterName("AJRouterIndexPage2", nil)
-        AJRouterPop(index: 1)
+        AJRouterName(routerName: "AJRouterIndexPage2", params: nil)
+//        AJRouterPop(index: 1)
     }
     
     override func didReceiveMemoryWarning() {

@@ -78,6 +78,14 @@ public func AJRouterPop(index:Int) {
 /// - Parameters:
 ///   - url: 路由
 ///   - animated: 是否有转场动画
+public func AJRouterPop(routerName:String, animated:Bool) {
+    AJRouterMananger.shared.popRouter(routerName: routerName, animated: animated)
+}
+
+/// 返回指定路由页面
+/// - Parameters:
+///   - url: 路由
+///   - animated: 是否有转场动画
 public func AJRouterPop(routerUrl:String, animated:Bool) {
     AJRouterMananger.shared.popRouter(routerUrl: routerUrl, animated: animated)
 }
