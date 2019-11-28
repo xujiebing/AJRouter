@@ -79,7 +79,7 @@ class AJRouterTool: NSObject {
     class func switchTabBarIndex(index:NSInteger) -> Bool {
         let currentVC = UIViewController.currentViewController()
         if let tabBar = currentVC.tabBarController {
-            if index >= tabBar.childViewControllers.count {
+            if index >= tabBar.children.count {
                 return false
             }
             if let nav = currentVC.navigationController {
