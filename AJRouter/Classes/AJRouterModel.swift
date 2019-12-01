@@ -37,13 +37,13 @@ class AJRouterModel: NSObject {
     class func modelWithUrl(url:String, params:[String:String]?) -> AJRouterModel? {
         var model:AJRouterModel?
         if url.isEmpty {
-            AJPrintLog("url为空")
+            AJRouterLog("url为空")
             return model;
         }
         var routerUrl = url
         let urlArray = routerUrl.components(separatedBy: "://")
         if urlArray.isEmpty {
-            AJPrintLog("url非法")
+            AJRouterLog("url非法")
             return model
         }
         var urlScheme:String = urlArray[0]
@@ -57,28 +57,28 @@ class AJRouterModel: NSObject {
         }
         let host = components!.host
         guard host != nil else {
-            AJPrintLog("【\(url)】host为空")
+            AJRouterLog("【\(url)】host为空")
             return model;
         }
         let path = components!.path
         if path.isEmpty {
-            AJPrintLog("【\(url)】path为空")
+            AJRouterLog("【\(url)】path为空")
             return model;
         }
         let pathArray = path.components(separatedBy: "/")
         let moduleName = pathArray[1]
         if moduleName.isEmpty {
-            AJPrintLog("【\(url)】模块名为空")
+            AJRouterLog("【\(url)】模块名为空")
             return model;
         }
         let routerClassDic = AJRouterMananger.shared.routerClassDic
         guard routerClassDic != nil else {
-            AJPrintLog("路由配置文件异常, 请检查路由文件")
+            AJRouterLog("路由配置文件异常, 请检查路由文件")
             return model
         }
         let array = routerClassDic![moduleName]
         guard array != nil else {
-            AJPrintLog("获取【\(moduleName)】下的对应路由配置信息为空")
+            AJRouterLog("获取【\(moduleName)】下的对应路由配置信息为空")
             return model;
         }
         for item in array! {

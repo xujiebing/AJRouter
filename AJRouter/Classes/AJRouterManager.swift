@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AJKitSwift
 
 public class AJRouterMananger: NSObject {
     var namePath, classPath, whitePath: String?
@@ -16,7 +17,7 @@ public class AJRouterMananger: NSObject {
         }
         var nameDic:[String:String]?
         guard namePath != nil else {
-            AJPrintLog("尚未配置【\(namePath!).json】文件")
+            AJRouterLog("尚未配置【\(namePath!).json】文件")
             return nameDic;
         }
         do {
@@ -26,7 +27,7 @@ public class AJRouterMananger: NSObject {
             }
             nameDic = object as? [String:String]
         } catch {
-            AJPrintLog("【\(namePath!).json】文件格式不正确")
+            AJRouterLog("【\(namePath!).json】文件格式不正确")
         }
         return nameDic
     }()
@@ -37,7 +38,7 @@ public class AJRouterMananger: NSObject {
         }
         var classDic:[String:[[String:String]]]?
         guard classPath != nil else {
-            AJPrintLog("尚未配置【\(classPath!).json】文件")
+            AJRouterLog("尚未配置【\(classPath!).json】文件")
             return classDic;
         }
         do {
@@ -47,7 +48,7 @@ public class AJRouterMananger: NSObject {
             }
             classDic = object as? [String:[[String:String]]]
         } catch {
-            AJPrintLog("【\(classPath!).json】文件格式不正确")
+            AJRouterLog("【\(classPath!).json】文件格式不正确")
         }
         return classDic
     }()
@@ -58,7 +59,7 @@ public class AJRouterMananger: NSObject {
         }
         var whiteArray:[String]?
         guard whitePath != nil else {
-            AJPrintLog("尚未配置【\(whitePath!).json】文件")
+            AJRouterLog("尚未配置【\(whitePath!).json】文件")
             return whiteArray;
         }
         do {
@@ -68,7 +69,7 @@ public class AJRouterMananger: NSObject {
             }
             whiteArray = object as? [String]
         } catch {
-            AJPrintLog("【\(whitePath!).json】文件格式不正确")
+            AJRouterLog("【\(whitePath!).json】文件格式不正确")
         }
         return whiteArray
     }()
@@ -108,7 +109,7 @@ public class AJRouterMananger: NSObject {
     // 根据路由url进行跳转
     func routerWithUrl(routerUrl url:String, params:[String:String]?) -> Bool {
         if url.hasPrefix("http://") || url.hasPrefix("https://") {
-            return url.openInSafari()
+            return url.ajOpenInSafari()
         }
         let model = AJRouterModel.modelWithUrl(url: url, params: params)
         if model == nil {
@@ -122,7 +123,7 @@ public class AJRouterMananger: NSObject {
     
     // 返回上级页面
     func popRouter() {
-        let currentVC = UIViewController.currentViewController()
+        let currentVC = UIViewController.ajCurrentViewController()
         if (currentVC.presentingViewController != nil) && currentVC.navigationController?.viewControllers.count == 1 {
             currentVC.dismiss(animated: true, completion: nil)
         } else {
@@ -148,7 +149,7 @@ public class AJRouterMananger: NSObject {
         if (index <= 0) {
             return;
         }
-        let currentVC = UIViewController.currentViewController()
+        let currentVC = UIViewController.ajCurrentViewController()
         if let nav = currentVC.navigationController {
             let vcArray = nav.viewControllers
             let count = vcArray.count
@@ -186,13 +187,13 @@ public class AJRouterMananger: NSObject {
     // 根据路由url返回指定页面
     func popRouter(routerUrl url:String, animated:Bool)  {
         let targetVCName = self.pageNameWithUrl(routerUrl: url)
-        let currentVC = UIViewController.currentViewController()
+        let currentVC = UIViewController.ajCurrentViewController()
         let nav = currentVC.navigationController
         guard let vcArray = nav?.viewControllers else {
             return
         }
         for itemVC in vcArray {
-            let itemVCName = itemVC.className
+            let itemVCName = itemVC.ajClassName
             if itemVCName != targetVCName {
                 continue
             }
@@ -205,7 +206,7 @@ public class AJRouterMananger: NSObject {
     func pageNameWithUrl(routerUrl url:String) -> String? {
         var pageName:String?
         if url.isEmpty {
-            AJPrintLog("url为空，无法获取pageName")
+            AJRouterLog("url为空，无法获取pageName")
             return pageName
         }
         let model = AJRouterModel.modelWithUrl(url: url, params: nil)

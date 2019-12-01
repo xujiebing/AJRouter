@@ -25,7 +25,7 @@ class AJRouterTool: NSObject {
     class func routerUrlWithName(routerName:String) -> String? {
         let url = AJRouterMananger.shared.routerNameDic?[routerName]
         guard url != nil else {
-            AJPrintLog("路由文件中未配置【\(routerName)】")
+            AJRouterLog("路由文件中未配置【\(routerName)】")
             return url
         }
         return url
@@ -69,7 +69,7 @@ class AJRouterTool: NSObject {
             let tempName = name.replacingOccurrences(of: "*", with: "")
             let value = model.params[name]
             guard value != nil else {
-                AJPrintLog("【\(tempName)】为必填参数, 不能为空")
+                AJRouterLog("【\(tempName)】为必填参数, 不能为空")
                 return isValid
             }
         }
@@ -77,7 +77,7 @@ class AJRouterTool: NSObject {
     }
     
     class func switchTabBarIndex(index:NSInteger) -> Bool {
-        let currentVC = UIViewController.currentViewController()
+        let currentVC = UIViewController.ajCurrentViewController()
         if let tabBar = currentVC.tabBarController {
             if index >= tabBar.children.count {
                 return false
@@ -96,13 +96,13 @@ class AJRouterTool: NSObject {
     class func viewControllerWithModel(model:AJRouterModel) -> UIViewController? {
         var vc:UIViewController?
         if model.url.isEmpty {
-            AJPrintLog("路由URL为空")
+            AJRouterLog("路由URL为空")
             return vc
         }
         let className = model.iclass
         let iclass:AnyClass? = self.classObject(className)
         if iclass == nil {
-            AJPrintLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
+            AJRouterLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
         }
         var params = model.params
@@ -120,7 +120,7 @@ class AJRouterTool: NSObject {
     }
     
     class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
-        let vc = UIViewController.currentViewController();
+        let vc = UIViewController.ajCurrentViewController();
         if jumpType == AJRouterJumpType.Present {
             let nav = UINavigationController.init(rootViewController: vc)
             vc.present(nav, animated: true, completion: nil)

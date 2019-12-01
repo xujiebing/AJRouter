@@ -29,10 +29,10 @@ public func AJRouterName(routerName:String, params:[String:String]?) {
         }
     }
     if AJRouterNameCall(routerName: routerName, params: params) {
-        AJPrintLog("跳转成功\nrouterName:\(routerName)\nparams:\(paramsString)")
+        AJRouterLog("跳转成功\nrouterName:\(routerName)\nparams:\(paramsString)")
         return;
     }
-    AJPrintLog("跳转失败\nrouterName:\(routerName)\nparams:\(paramsString)")
+    AJRouterLog("跳转失败\nrouterName:\(routerName)\nparams:\(paramsString)")
 }
 
 /// 根据路由名进行跳转,有返回值 YES:跳转成功
@@ -55,10 +55,10 @@ public func AJRouterUrl(routerUrl:String, params:[String:String]?) {
         }
     }
     if AJRouterUrlCall(routerUrl: routerUrl, params: params) {
-        AJPrintLog("跳转成功\nrouterName:\(routerUrl)\nparams:\(paramsString)")
+        AJRouterLog("跳转成功\nrouterName:\(routerUrl)\nparams:\(paramsString)")
         return;
     }
-    AJPrintLog("跳转失败\nrouterName:\(routerUrl)\nparams:\(paramsString)")
+    AJRouterLog("跳转失败\nrouterName:\(routerUrl)\nparams:\(paramsString)")
 }
 
 /// 根据路由url进行跳转,有返回值 YES:跳转成功
