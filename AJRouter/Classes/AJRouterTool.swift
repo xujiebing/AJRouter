@@ -100,7 +100,7 @@ class AJRouterTool: NSObject {
             return vc
         }
         let className = model.iclass
-        let iclass:AnyClass? = self.classObject(className)
+        let iclass:AnyClass? = className.ajClassObject()
         if iclass == nil {
             AJRouterLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
@@ -132,11 +132,5 @@ class AJRouterTool: NSObject {
             }
             return false
         }
-    }
-    
-    class func classObject(_ className:String) -> AnyClass? {
-        let projectName = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
-        let classObj:AnyClass? = NSClassFromString(projectName + "." + className)
-        return classObj
     }
 }
