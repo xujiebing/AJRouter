@@ -100,7 +100,7 @@ class AJRouterTool: NSObject {
             return vc
         }
         let className = model.iclass
-        let iclass:AnyClass? = className.ajClassObject()
+        let iclass:AnyClass? = className.ajClassObject(nil)
         if iclass == nil {
             AJRouterLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
