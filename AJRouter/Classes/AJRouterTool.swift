@@ -99,8 +99,13 @@ class AJRouterTool: NSObject {
             AJRouterLog("路由URL为空")
             return vc
         }
+        let nameSpace = model.nameSpace
         let className = model.iclass
-        let iclass:AnyClass? = className.ajClassObject(nil)
+        guard !className.isEmpty else {
+            AJRouterLog("请在routerClass.json中配置正确的iclass")
+            return vc
+        }
+        let iclass:AnyClass? = className.ajClassObject(nameSpace)
         if iclass == nil {
             AJRouterLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
@@ -122,7 +127,7 @@ class AJRouterTool: NSObject {
     class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
         let vc = UIViewController.ajCurrentViewController();
         if jumpType == AJRouterJumpType.Present {
-            let nav = UINavigationController.init(rootViewController: vc)
+            let nav = UINavigationController.init(rootViewController: viewController)
             vc.present(nav, animated: true, completion: nil)
             return true;
         } else {

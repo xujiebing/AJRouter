@@ -19,6 +19,8 @@ class AJRouterModel: NSObject {
     var urlComponents:URLComponents?
     // 页面名称
     var iclass = ""
+    // 命名空间
+    var nameSpace = ""
     // 跳转到原生的参数
     var params = Dictionary<String,String>()
     // 跳转方式
@@ -31,6 +33,9 @@ class AJRouterModel: NSObject {
         }
         if let iclass = dic["iclass"] {
             self.iclass = iclass
+        }
+        if let nameSpace = dic["nameSpace"] {
+            self.nameSpace = nameSpace
         }
     }
     

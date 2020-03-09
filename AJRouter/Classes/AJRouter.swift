@@ -29,10 +29,10 @@ public func AJRouterName(routerName:String, params:[String:String]?) {
         }
     }
     if AJRouterNameCall(routerName: routerName, params: params) {
-        AJRouterLog("跳转成功\nrouterName:\(routerName)\nparams:\(paramsString)")
+        AJRouterLog("跳转成功 routerName:\(routerName) params:\(paramsString)")
         return;
     }
-    AJRouterLog("跳转失败\nrouterName:\(routerName)\nparams:\(paramsString)")
+    AJRouterLog("跳转失败 routerName:\(routerName) params:\(paramsString)")
 }
 
 /// 根据路由名进行跳转,有返回值 YES:跳转成功
