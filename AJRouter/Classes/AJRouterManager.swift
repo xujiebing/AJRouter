@@ -8,7 +8,7 @@
 import Foundation
 import AJKitSwift
 
-public class AJRouterMananger: NSObject {
+class AJRouterMananger: NSObject {
     var namePath, classPath, whitePath: String?
     lazy var routerNameDic: [String:String]? = {
         var namePath:String? = self.namePath

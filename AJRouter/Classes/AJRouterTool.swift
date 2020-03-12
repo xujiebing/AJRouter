@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftyJSON
+import PPTKit
 
 class AJRouterTool: NSObject {
     
@@ -127,7 +128,8 @@ class AJRouterTool: NSObject {
     class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
         let vc = UIViewController.ajCurrentViewController();
         if jumpType == AJRouterJumpType.Present {
-            let nav = UINavigationController.init(rootViewController: viewController)
+            let nav = initNavigationController(viewController: viewController)
+//            let nav = UITNavigationController(rootViewController: viewController)
             vc.present(nav, animated: true, completion: nil)
             return true;
         } else {
@@ -137,5 +139,14 @@ class AJRouterTool: NSObject {
             }
             return false
         }
+    }
+    
+    class func initNavigationController(viewController: UIViewController) -> UINavigationController {
+        guard let className = NSClassFromString("PPTKit.PPTNavigationController") as? UINavigationController.Type  else {
+            return UINavigationController(rootViewController: viewController)
+        }
+        var navClass = className.init()
+        navClass.setViewControllers([viewController], animated: false)
+        return navClass
     }
 }
