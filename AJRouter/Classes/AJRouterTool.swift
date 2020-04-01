@@ -7,7 +7,6 @@
 
 import UIKit
 import SwiftyJSON
-import PPTKit
 
 class AJRouterTool: NSObject {
     
@@ -129,7 +128,7 @@ class AJRouterTool: NSObject {
         let vc = UIViewController.ajCurrentViewController();
         if jumpType == AJRouterJumpType.Present {
             let nav = initNavigationController(viewController: viewController)
-//            let nav = UITNavigationController(rootViewController: viewController)
+            nav.modalPresentationStyle = .overFullScreen
             vc.present(nav, animated: true, completion: nil)
             return true;
         } else {

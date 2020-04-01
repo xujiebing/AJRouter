@@ -19,7 +19,6 @@ TODO: Add long description of the pod here.
   s.source_files = 'AJRouter/Classes/*.swift'
   s.dependency 'SwiftyJSON', '5.0.0'
   s.dependency 'AJKitSwift'
-  s.dependency 'PPTKit'
   
   # s.resource_bundles = {
   #   'AJRouter' => ['AJRouter/Assets/*.png']
