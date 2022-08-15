@@ -5,8 +5,8 @@
 //  Created by 徐结兵 on 2019/10/29.
 //
 
-import UIKit
 import SwiftyJSON
+import AJUIKit
 
 class AJRouterTool: NSObject {
     

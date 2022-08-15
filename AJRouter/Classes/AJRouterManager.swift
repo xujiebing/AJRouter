@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import AJKitSwift
+import AJFoundation
 
 class AJRouterMananger: NSObject {
     var namePath, classPath, whitePath: String?

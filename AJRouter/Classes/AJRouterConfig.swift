@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import AJKitSwift
+import AJFoundation
 
 func AJRouterLog(_ messages: Any..., file: String = #file, function: String = #function, line: Int = #line) {
-    AJPrintLog(messages, file, function, line)
+    AJLog(messages, file, function, line)
 }
 
