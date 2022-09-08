@@ -193,7 +193,7 @@ class AJRouterMananger: NSObject {
             return
         }
         for itemVC in vcArray {
-            let itemVCName = itemVC.ajClassName
+            let itemVCName = itemVC.className
             if itemVCName != targetVCName {
                 continue
             }
