@@ -123,7 +123,7 @@ class AJRouterMananger: NSObject {
     
     // 返回上级页面
     func popRouter() {
-        let currentVC = UIViewController.ajCurrentViewController()
+        let currentVC = UIViewController.currentViewController()
         if (currentVC.presentingViewController != nil) && currentVC.navigationController?.viewControllers.count == 1 {
             currentVC.dismiss(animated: true, completion: nil)
         } else {
@@ -149,7 +149,7 @@ class AJRouterMananger: NSObject {
         if (index <= 0) {
             return;
         }
-        let currentVC = UIViewController.ajCurrentViewController()
+        let currentVC = UIViewController.currentViewController()
         if let nav = currentVC.navigationController {
             let vcArray = nav.viewControllers
             let count = vcArray.count
@@ -187,7 +187,7 @@ class AJRouterMananger: NSObject {
     // 根据路由url返回指定页面
     func popRouter(routerUrl url:String, animated:Bool)  {
         let targetVCName = self.pageNameWithUrl(routerUrl: url)
-        let currentVC = UIViewController.ajCurrentViewController()
+        let currentVC = UIViewController.currentViewController()
         let nav = currentVC.navigationController
         guard let vcArray = nav?.viewControllers else {
             return

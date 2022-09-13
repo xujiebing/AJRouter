@@ -77,7 +77,7 @@ class AJRouterTool: NSObject {
     }
     
     class func switchTabBarIndex(index:NSInteger) -> Bool {
-        let currentVC = UIViewController.ajCurrentViewController()
+        let currentVC = UIViewController.currentViewController()
         if let tabBar = currentVC.tabBarController {
             if index >= tabBar.children.count {
                 return false
@@ -125,7 +125,7 @@ class AJRouterTool: NSObject {
     }
     
     class func jumpPageWithViewController(viewController:UIViewController, jumpType:AJRouterJumpType) -> Bool {
-        let vc = UIViewController.ajCurrentViewController();
+        let vc = UIViewController.currentViewController();
         if jumpType == AJRouterJumpType.Present {
             let nav = initNavigationController(viewController: viewController)
             nav.modalPresentationStyle = .overFullScreen
