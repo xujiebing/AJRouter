@@ -1,4 +1,4 @@
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'AJRouter_Example' do
   pod 'AJRouter',

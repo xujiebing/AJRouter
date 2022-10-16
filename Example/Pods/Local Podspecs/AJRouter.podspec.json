@@ -16,12 +16,20 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
+  "swift_versions": "5.0",
   "source_files": "AJRouter/Classes/*.swift",
   "dependencies": {
     "SwiftyJSON": [
-      "5.0.0"
+
+    ],
+    "AJFoundation": [
+
+    ],
+    "AJUIKit": [
+
     ]
-  }
+  },
+  "swift_version": "5.0"
 }
