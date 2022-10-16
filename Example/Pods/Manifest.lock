@@ -1,13 +1,20 @@
 PODS:
+  - AJFoundation (0.1.0)
   - AJRouter (0.1.0):
-    - SwiftyJSON (= 5.0.0)
+    - AJFoundation
+    - AJUIKit
+    - SwiftyJSON
+  - AJUIKit (0.1.0):
+    - AJFoundation
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - AJRouter (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
+    - AJFoundation
+    - AJUIKit
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -15,9 +22,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AJRouter: f688527803f3463b5fcd94885a1577c3d0d05e57
+  AJFoundation: f930d6cb778628abe457b256f109e4ecf1300607
+  AJRouter: 69bf1452b477f293ba3cb5a966a0171ef50a5c49
+  AJUIKit: f4ac3fb7c351e098dd69dfc6afe8af691724a00b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2b615c294d4d79796dc98e25beb58a9c45f47142
+PODFILE CHECKSUM: 1bc5013089c4b1c7814a3f60e8354c8624e5defb
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.11.3

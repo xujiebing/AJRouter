@@ -1,4 +1,4 @@
-framework module Pods_AJRouter_Example {
+module Pods_AJRouter_Example {
   umbrella header "Pods-AJRouter_Example-umbrella.h"
 
   export *

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52259FB7A3B5BE1CBDFBF495 /* Pods_AJRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49AB522E9C5A5283D82B0007 /* Pods_AJRouter_Tests.framework */; };
+		0E7D273FF1AC83EB8909F5B9 /* libPods-AJRouter_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F4153BA09042BFEABBF1 /* libPods-AJRouter_Example.a */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 		9B8122702369D012005E2268 /* routerWhite.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226D2369D012005E2268 /* routerWhite.json */; };
 		9B8122712369D012005E2268 /* routerClass.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226E2369D012005E2268 /* routerClass.json */; };
 		9B8122722369D012005E2268 /* routerName.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B81226F2369D012005E2268 /* routerName.json */; };
-		F2239042AEC2A711E59A681F /* Pods_AJRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAFBD999844F0EA6F2532CE /* Pods_AJRouter_Example.framework */; };
+		EAA731517F37054A847E1A33 /* libPods-AJRouter_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBBC8F7258D041AD49FEFED /* libPods-AJRouter_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,8 @@
 
 /* Begin PBXFileReference section */
 		37C70937F941AD028D58C508 /* Pods-AJRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AJRouter_Example.debug.xcconfig"; path = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4290F4153BA09042BFEABBF1 /* libPods-AJRouter_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AJRouter_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4661D5371FDB0E757C97591A /* Pods-AJRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AJRouter_Example.release.xcconfig"; path = "Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
-		49AB522E9C5A5283D82B0007 /* Pods_AJRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AJRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* AJRouter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AJRouter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,8 +47,8 @@
 		607FACE51AFB9204008FA782 /* AJRouter_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AJRouter_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6CAFBD999844F0EA6F2532CE /* Pods_AJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB6B1532EF74EE4FC07F0D1 /* AJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AJRouter.podspec; path = ../AJRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EBBC8F7258D041AD49FEFED /* libPods-AJRouter_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AJRouter_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B3DA8FD2388B94C00BB326C /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		9B3DA8FF2388BA0F00BB326C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		9B3DA9012388BA1B00BB326C /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2239042AEC2A711E59A681F /* Pods_AJRouter_Example.framework in Frameworks */,
+				0E7D273FF1AC83EB8909F5B9 /* libPods-AJRouter_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52259FB7A3B5BE1CBDFBF495 /* Pods_AJRouter_Tests.framework in Frameworks */,
+				EAA731517F37054A847E1A33 /* libPods-AJRouter_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +160,8 @@
 		810E56977BA3A086AB2EBF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6CAFBD999844F0EA6F2532CE /* Pods_AJRouter_Example.framework */,
-				49AB522E9C5A5283D82B0007 /* Pods_AJRouter_Tests.framework */,
+				4290F4153BA09042BFEABBF1 /* libPods-AJRouter_Example.a */,
+				8EBBC8F7258D041AD49FEFED /* libPods-AJRouter_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,7 +188,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				151B18EA17B66398F7E62418 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,26 +281,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		151B18EA17B66398F7E62418 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AJRouter/AJRouter.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AJRouter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AJRouter_Example/Pods-AJRouter_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A6384E68C733FDB8377F24BC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

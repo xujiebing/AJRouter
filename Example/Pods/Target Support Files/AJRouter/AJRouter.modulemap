@@ -1,4 +1,4 @@
-framework module AJRouter {
+module AJRouter {
   umbrella header "AJRouter-umbrella.h"
 
   export *
