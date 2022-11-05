@@ -66,10 +66,12 @@ class AJRouterTool: NSObject {
             if !name.hasPrefix("*") {
                 continue
             }
-            let tempName = name.replacingOccurrences(of: "*", with: "")
-            let value = model.params[name]
+            let nameArray = name.components(separatedBy: "*")
+            let tempName = nameArray.last as! String
+//            let tempName = name.replacingOccurrences(of: "*", with: "")
+            let value = model.params[tempName]
             guard value != nil else {
-                AJRouterLog("【\(tempName)】为必填参数, 不能为空")
+                AJRouterLog("【\(tempName)==\(value)】为必填参数, 不能为空")
                 return isValid
             }
         }
@@ -99,13 +101,19 @@ class AJRouterTool: NSObject {
             AJRouterLog("路由URL为空")
             return vc
         }
-        let nameSpace = model.nameSpace
-        let className = model.iclass
-        guard !className.isEmpty else {
+        let classString = model.iclass
+        guard !classString.isEmpty else {
             AJRouterLog("请在routerClass.json中配置正确的iclass")
             return vc
         }
-        let iclass:AnyClass? = className.ajClassObject(nameSpace)
+        
+        var className = classString
+        let nameSpace = model.nameSpace
+        if !nameSpace.isEmpty {
+            className = nameSpace + "." + className
+        }
+        
+        let iclass:AnyClass? = NSClassFromString(className)
         if iclass == nil {
             AJRouterLog("找不到【\(className)】需要跳转的原生类, 请检查是否有集成对应的模块")
             return vc
