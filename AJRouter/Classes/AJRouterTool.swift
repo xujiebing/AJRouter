@@ -69,8 +69,11 @@ class AJRouterTool: NSObject {
             let nameArray = name.components(separatedBy: "*")
             let tempName = nameArray.last as! String
 //            let tempName = name.replacingOccurrences(of: "*", with: "")
-            let value = model.params[tempName]
-            guard value != nil else {
+            guard let value = model.params[tempName] else {
+                AJRouterLog("【\(tempName)==nil】为必填参数, 不能为空")
+                return isValid
+            }
+            if value.isEmpty {
                 AJRouterLog("【\(tempName)==\(value)】为必填参数, 不能为空")
                 return isValid
             }
@@ -137,11 +140,15 @@ class AJRouterTool: NSObject {
         if jumpType == AJRouterJumpType.Present {
             let nav = initNavigationController(viewController: viewController)
             nav.modalPresentationStyle = .overFullScreen
-            vc.present(nav, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                vc.present(nav, animated: true, completion: nil)            
+            }
             return true;
         } else {
             if let nav = vc.navigationController {
-                nav.pushViewController(viewController, animated: true)
+                DispatchQueue.main.async {                
+                    nav.pushViewController(viewController, animated: true)
+                }
                 return true
             }
             return false

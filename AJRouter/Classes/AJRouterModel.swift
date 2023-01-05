@@ -131,6 +131,7 @@ class AJRouterModel: NSObject {
             dic = params!
         }
         if itemDic.isEmpty {
+            self.params = dic
             return
         }
         for (key, value) in itemDic {
