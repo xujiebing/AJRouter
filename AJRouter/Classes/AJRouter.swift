@@ -94,3 +94,12 @@ public func AJRouterPop(routerUrl:String, animated:Bool) {
 public func AJRouterPageNameWithUrl(routerUrl:String) -> String? {
     return AJRouterMananger.shared.pageNameWithUrl(routerUrl: routerUrl)
 }
+
+/// 根据路由名获取页面名称
+/// - Parameter routerUrl: 路由url
+public func AJRouterPageNameWithRouterName(routerName:String) -> String? {
+    guard let routerUrl = AJRouterTool.routerUrlWithName(routerName: routerName) else {
+        return nil
+    }
+    return AJRouterMananger.shared.pageNameWithUrl(routerUrl: routerUrl)
+}

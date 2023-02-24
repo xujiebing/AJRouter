@@ -209,11 +209,13 @@ class AJRouterMananger: NSObject {
             AJRouterLog("url为空，无法获取pageName")
             return pageName
         }
-        let model = AJRouterModel.modelWithUrl(url: url, params: nil)
-        guard model != nil else {
+        guard let model = AJRouterModel.modelWithUrl(url: url, params: nil) else {
             return pageName
         }
-        pageName = model!.iclass
+        pageName = model.iclass
+        guard model.nameSpace == "" else {
+            return model.nameSpace + "." + pageName!
+        }
         return pageName
     }
     
